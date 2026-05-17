@@ -91,7 +91,7 @@ about:
   banner_img: ""
   banner_img_height: 30
   banner_mask_alpha: 0.3
-  avatar: ""C:\Users\Peter\OneDrive\图片\PHONE\156eb7aeb8d2214b3cb83468f5fff8f3.jpg""                    # 头像图片路径，如 /img/avatar.jpg
+  avatar: ""     # 头像图片路径，如 /img/avatar.jpg
   name: "Sojya"
   intro: "记录 分享"        # 个人简介，可以改
   icons:                        # 社交链接（不需要的删掉）

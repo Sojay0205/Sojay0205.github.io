@@ -86,7 +86,8 @@ exclude:
 ignore:
 
 # ----- 主题设置 -----
-theme: fluid                    # 使用 Fluid 主题
+theme: fluid
+theme_config:                    # 使用 Fluid 主题
 
 # ----- 部署设置（GitHub Actions 自动部署，这里留空）-----
 deploy:

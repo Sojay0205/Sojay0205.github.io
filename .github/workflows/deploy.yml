@@ -4,6 +4,9 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,8 +21,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Hexo
-        run: npm install hexo-cli -g
+      - name: Install Hexo and theme
+        run: |
+          npm install hexo-cli -g
+          npm install --save hexo-theme-fluid
 
       - name: Build
         run: hexo generate

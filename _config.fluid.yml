@@ -9,7 +9,7 @@ color_scheme: auto              # auto = 跟随系统深色/浅色模式
 
 # ----- 顶部导航栏 -----
 navbar:
-  blog_title: "Sojya0205"       # 左上角博客名，可改
+  blog_title: "Sojya"       # 左上角博客名，可改
   blog_title_url: "/"
   menu:
     - { key: "home",    link: "/",          icon: "iconfont icon-home-fill" }
@@ -60,7 +60,7 @@ post:
     enable: true                # 文章底部版权声明
     default: CC BY-NC-SA 4.0
   comments:
-    enable: false               # 暂时关闭评论，需要时再开启
+    enable: true               # 暂时关闭评论，需要时再开启
 
 # ----- 归档页 -----
 archive:
@@ -91,9 +91,9 @@ about:
   banner_img: ""
   banner_img_height: 30
   banner_mask_alpha: 0.3
-  avatar: ""                    # 头像图片路径，如 /img/avatar.jpg
-  name: "Sojya0205"
-  intro: "记录生活与思考"        # 个人简介，可以改
+  avatar: ""C:\Users\Peter\OneDrive\图片\PHONE\156eb7aeb8d2214b3cb83468f5fff8f3.jpg""                    # 头像图片路径，如 /img/avatar.jpg
+  name: "Sojya"
+  intro: "记录 分享"        # 个人简介，可以改
   icons:                        # 社交链接（不需要的删掉）
     - { class: "iconfont icon-github-fill", link: "https://github.com/Sojya0205", tip: "GitHub" }
 
@@ -108,7 +108,7 @@ page404:
 footer:
   content: '由 <a href="https://hexo.io" target="_blank">Hexo</a> 驱动，主题 <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank">Fluid</a>'
   statistics:
-    enable: false               # 关闭访问统计
+    enable: true               # 关闭访问统计
   beian:
     enable: false               # 关闭备案信息（境外部署不需要）
 

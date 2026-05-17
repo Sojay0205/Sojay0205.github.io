@@ -1,0 +1,93 @@
+# ===================================================
+# Hexo 主配置文件 _config.yml
+# 用户：Sojya0205
+# 主题：Fluid（简约风格）
+# ===================================================
+
+# ----- 站点基本信息 -----
+title: Sojya0205's Blog        # 博客名称，可改成你喜欢的名字
+subtitle: ''                    # 副标题，留空
+description: '记录生活与思考'    # 博客简介
+keywords:
+author: Sojya0205               # 作者名
+language: zh-CN                 # 语言：中文
+timezone: 'Asia/Shanghai'       # 时区
+
+# ----- 网址设置 -----
+url: https://Sojya0205.github.io
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+# ----- 目录结构（保持默认即可）-----
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# ----- 文章写作设置 -----
+new_post_name: :title.md        # 新文章文件名格式
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prism_plugin:
+  mode: 'preprocess'
+  theme: 'default'
+  line_number: false
+  custom_css:
+
+# ----- 主页分页 -----
+index_generator:
+  path: ''
+  per_page: 10                  # 每页显示文章数
+  order_by: -date
+
+# ----- 分类 & 标签 -----
+default_category: uncategorized
+category_map:
+tag_map:
+
+# ----- 元数据 -----
+meta_generator: true
+
+# ----- 日期格式 -----
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: 'mtime'
+
+# ----- 分页 -----
+per_page: 10
+pagination_dir: page
+
+# ----- 包含 / 排除文件 -----
+include:
+exclude:
+ignore:
+
+# ----- 主题设置 -----
+theme: fluid                    # 使用 Fluid 主题
+
+# ----- 部署设置（GitHub Actions 自动部署，这里留空）-----
+deploy:
+  type: ''

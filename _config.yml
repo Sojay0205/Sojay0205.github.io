@@ -5,16 +5,16 @@
 # ===================================================
 
 # ----- 站点基本信息 -----
-title: Sojya0205's Blog        # 博客名称，可改成你喜欢的名字
+title: Sojay's Blog        # 博客名称，可改成你喜欢的名字
 subtitle: ''                    # 副标题，留空
-description: '记录生活与思考'    # 博客简介
+description: '记录 分享'    # 博客简介
 keywords:
-author: Sojya0205               # 作者名
+author: Sojay               # 作者名
 language: zh-CN                 # 语言：中文
 timezone: 'Asia/Shanghai'       # 时区
 
 # ----- 网址设置 -----
-url: https://Sojya0205.github.io
+url: https://Sojay0205.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:

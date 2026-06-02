@@ -9,7 +9,7 @@ color_scheme: auto              # auto = 跟随系统深色/浅色模式
 
 # ----- 顶部导航栏 -----
 navbar:
-  blog_title: "记录 分享"       # 左上角博客名，可改
+  blog_title: "Sojay"       # 左上角博客名，可改
   blog_title_url: "/"
   menu:
     - { key: "home",    link: "/",          icon: "iconfont icon-home-fill" }

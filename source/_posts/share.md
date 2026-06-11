@@ -1,3 +1,8 @@
+---
+title: share
+date: 2026-06-11 12:22:21
+tags: share
+---
 # AI Coding 零基础实战教程
 
 > 从零开始，用自然语言指挥AI构建真实软件项目

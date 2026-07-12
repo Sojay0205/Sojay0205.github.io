@@ -19,16 +19,16 @@
   <meta name="author" content="Sojay">
   <meta name="keywords" content="">
   
-    <meta name="description" content="碎碎念         一些不成文的瞬间，记录生活、心情与灵感。              公开发布       &lt;section class&#x3D;&quot;composer-card&quot;&gt;   &lt;div id&#x3D;&quot;imagePreviewWrap&quot; class&#x3D;&quot;image-preview-wra">
+    <meta name="description" content="碎碎念                           碎碎念         一些不成文的瞬间，记录生活、心情与灵感。              公开发布                                    移除图片                        上传图片                  可选，支持常见图片格式">
 <meta property="og:type" content="website">
 <meta property="og:title" content="碎碎念">
 <meta property="og:url" content="https://sojay0205.github.io/notes/index.html">
 <meta property="og:site_name" content="Sojay&#39;s Blog">
-<meta property="og:description" content="碎碎念         一些不成文的瞬间，记录生活、心情与灵感。              公开发布       &lt;section class&#x3D;&quot;composer-card&quot;&gt;   &lt;div id&#x3D;&quot;imagePreviewWrap&quot; class&#x3D;&quot;image-preview-wra">
+<meta property="og:description" content="碎碎念                           碎碎念         一些不成文的瞬间，记录生活、心情与灵感。              公开发布                                    移除图片                        上传图片                  可选，支持常见图片格式">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sojay0205.github.io/notes/$%7Bnote.image_url%7D">
-<meta property="article:published_time" content="2026-07-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-07-12T07:30:16.154Z">
+<meta property="article:published_time" content="2026-07-12T09:43:50.324Z">
+<meta property="article:modified_time" content="2026-07-12T09:43:50.324Z">
 <meta property="article:author" content="Sojay">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://sojay0205.github.io/notes/$%7Bnote.image_url%7D">
@@ -330,7 +330,15 @@
                 
 
 <article class="page-content">
-  <div class="thoughts-page">
+  <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>碎碎念</title>
+</head>
+<body>
+<div class="thoughts-page">
   <div class="thoughts-shell">
     <header class="thoughts-header">
       <div>
@@ -340,36 +348,35 @@
       <div class="thoughts-badge">公开发布</div>
     </header>
 
-<pre><code class="hljs">&lt;section class=&quot;composer-card&quot;&gt;
-  &lt;div id=&quot;imagePreviewWrap&quot; class=&quot;image-preview-wrap&quot; hidden&gt;
-    &lt;img id=&quot;imagePreview&quot; alt=&quot;预览&quot; /&gt;
-    &lt;button type=&quot;button&quot; id=&quot;removeImageBtn&quot; class=&quot;remove-image-btn&quot;&gt;移除图片&lt;/button&gt;
-  &lt;/div&gt;
+    <section class="composer-card">
+      <div id="imagePreviewWrap" class="image-preview-wrap" hidden>
+        <img id="imagePreview" alt="预览" />
+        <button type="button" id="removeImageBtn" class="remove-image-btn">移除图片</button>
+      </div>
 
-  &lt;div class=&quot;upload-row&quot;&gt;
-    &lt;label class=&quot;upload-btn&quot; for=&quot;imageInput&quot;&gt;上传图片&lt;/label&gt;
-    &lt;input id=&quot;imageInput&quot; type=&quot;file&quot; accept=&quot;image/*&quot; hidden /&gt;
-    &lt;span id=&quot;uploadHint&quot; class=&quot;upload-hint&quot;&gt;可选，支持常见图片格式&lt;/span&gt;
-  &lt;/div&gt;
+      <div class="upload-row">
+        <label class="upload-btn" for="imageInput">上传图片</label>
+        <input id="imageInput" type="file" accept="image/*" hidden />
+        <span id="uploadHint" class="upload-hint">可选，支持常见图片格式</span>
+      </div>
 
-  &lt;textarea id=&quot;noteInput&quot; maxlength=&quot;300&quot; placeholder=&quot;写下一条碎碎念…&quot;&gt;&lt;/textarea&gt;
-  &lt;div class=&quot;composer-footer&quot;&gt;
-    &lt;span id=&quot;countHint&quot;&gt;0 / 300&lt;/span&gt;
-    &lt;button type=&quot;button&quot; id=&quot;publishBtn&quot;&gt;发布&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;p id=&quot;statusText&quot; class=&quot;status-text&quot;&gt;加载中…&lt;/p&gt;
-&lt;/section&gt;
+      <textarea id="noteInput" maxlength="300" placeholder="写下一条碎碎念…"></textarea>
+      <div class="composer-footer">
+        <span id="countHint">0 / 300</span>
+        <button type="button" id="publishBtn">发布</button>
+      </div>
+      <p id="statusText" class="status-text">加载中…</p>
+    </section>
 
-&lt;section id=&quot;authBox&quot; class=&quot;auth-card&quot; hidden&gt;
-  &lt;div class=&quot;auth-row&quot;&gt;
-    &lt;input id=&quot;emailInput&quot; type=&quot;email&quot; placeholder=&quot;输入管理员邮箱登录后可删除&quot; /&gt;
-    &lt;button type=&quot;button&quot; id=&quot;loginBtn&quot;&gt;发送登录链接&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;p class=&quot;helper-text&quot;&gt;登录后页面会显示删除按钮。&lt;/p&gt;
-&lt;/section&gt;
+    <section id="authBox" class="auth-card" hidden>
+      <div class="auth-row">
+        <input id="emailInput" type="email" placeholder="输入管理员邮箱登录后可删除" />
+        <button type="button" id="loginBtn">发送登录链接</button>
+      </div>
+      <p class="helper-text">登录后页面会显示删除按钮。</p>
+    </section>
 
-&lt;section id=&quot;notesList&quot; class=&quot;timeline&quot;&gt;&lt;/section&gt;
-</code></pre>
+    <section id="notesList" class="timeline"></section>
   </div>
 </div>
 
@@ -656,7 +663,8 @@
 
   init();
 </script>
-
+</body>
+</html>
 
 
   

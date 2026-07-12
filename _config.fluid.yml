@@ -10,6 +10,7 @@ navbar:
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tag" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "notes", link: "/notes/", icon: "iconfont icon-edit" }
+    - { key: "messages", link: "/messages/", icon: "iconfont icon-comment" }
   search:
     enable: true
     path: /local-search.xml
@@ -53,6 +54,7 @@ post:
     default: CC BY-NC-SA 4.0
   comments:
     enable: true
+    type: supabase-messageboard
 
 archive:
   banner_img: ""

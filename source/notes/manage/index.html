@@ -58,15 +58,23 @@ const getSession = async () => { const { data } = await supabase.auth.getSession
 const isAdmin = (session) => Boolean(session?.user?.email && session.user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase());
 const formatTime = (value) => new Date(value).toLocaleString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
 const escapeText = (value) => (value || '').trim();
+const resolveImageUrl = async (value) => {
+  if (!value) return '';
+  if (/^(https?:|data:)/i.test(value)) return value;
+  if (value.startsWith('storage:')) {
+    const storagePath = value.slice('storage:'.length);
+    const { data, error } = await supabase.storage.from('thoughts-images').createSignedUrl(storagePath, 60 * 60 * 24 * 7);
+    if (!error && data?.signedUrl) return data.signedUrl;
+  }
+  return value;
+};
 const renderNotes = async () => {
   const { data, error } = await supabase.from(COMMENTS_TABLE).select('id, content, website, created_at').eq('scope', 'notes').in('thread_key', ['notes', '/notes']).is('parent_id', null).order('created_at', { ascending: false });
   if (error) { notesList.innerHTML = `<div class="empty">加载失败：${error.message}</div>`; return; }
   if (!data.length) { notesList.innerHTML = '<div class="empty">还没有碎碎念。</div>'; return; }
-  notesList.innerHTML = data.map((item) => {
-    const imageSrc = item.website || '';
-    return `<article class="item" data-id="${item.id}"><div class="item-card"><div class="item-head"><time>${formatTime(item.created_at)}</time><span>碎碎念</span></div><div class="item-body">${imageSrc ? `<img class="item-image" src="${imageSrc}" alt="碎碎念图片">` : ''}<div class="item-text"></div></div><div class="item-actions"><button class="delete-btn" type="button" data-delete-note="${item.id}">删除</button></div></div></article>`;
-  }).join('');
-  notesList.querySelectorAll('.item').forEach((card) => { const item = data.find((entry) => entry.id === card.dataset.id); card.querySelector('.item-text').textContent = item.content; });
+  const resolved = await Promise.all(data.map(async (item) => ({ ...item, imageSrc: await resolveImageUrl(item.website) })));
+  notesList.innerHTML = resolved.map((item) => `<article class="item" data-id="${item.id}"><div class="item-card"><div class="item-head"><time>${formatTime(item.created_at)}</time><span>碎碎念</span></div><div class="item-body">${item.imageSrc ? `<img class="item-image" src="${item.imageSrc}" alt="碎碎念图片">` : ''}<div class="item-text"></div></div><div class="item-actions"><button class="delete-btn" type="button" data-delete-note="${item.id}">删除</button></div></div></article>`).join('');
+  notesList.querySelectorAll('.item').forEach((card) => { const item = resolved.find((entry) => entry.id === card.dataset.id); card.querySelector('.item-text').textContent = item.content; });
 };
 const renderMessages = async () => {
   const { data, error } = await supabase.from(COMMENTS_TABLE).select('id, name, content, created_at').eq('scope', 'board').is('parent_id', null).order('created_at', { ascending: false });
@@ -94,6 +102,7 @@ loginBtn.addEventListener('click', login);
 setStatus('等待登录');
 renderAll();
 </script>
+
 
 
 

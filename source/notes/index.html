@@ -99,7 +99,8 @@ const uploadImage = async (file) => {
 };
 const formatTime = (value) => new Date(value).toLocaleString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
 const render = async () => {
-  const { data, error } = await supabase.from(COMMENTS_TABLE).select('id, content, website, created_at').eq('scope', 'notes').eq('thread_key', THREAD_KEY).is('parent_id', null).order('created_at', { ascending: false });
+  const query = supabase.from(COMMENTS_TABLE).select('id, content, website, created_at').eq('scope', 'notes').in('thread_key', ['notes', '/notes']).is('parent_id', null).order('created_at', { ascending: false });
+  const { data, error } = await query;
   if (error) {
     notesList.innerHTML = `<div class="note-empty">加载失败：${error.message}</div>`;
     return;
@@ -108,7 +109,10 @@ const render = async () => {
     notesList.innerHTML = '<div class="note-empty">还没有内容，先留下第一条吧。</div>';
     return;
   }
-  notesList.innerHTML = data.map((item) => `<article class="note-item" data-id="${item.id}"><div class="note-card"><div class="note-head"><time>${formatTime(item.created_at)}</time></div><div class="note-body">${item.website ? `<img class="note-image" src="${item.website}" alt="碎碎念图片">` : ''}<div class="note-text"></div></div></div></article>`).join('');
+  notesList.innerHTML = data.map((item) => {
+    const imageSrc = item.website || '';
+    return `<article class="note-item" data-id="${item.id}"><div class="note-card"><div class="note-head"><time>${formatTime(item.created_at)}</time></div><div class="note-body">${imageSrc ? `<img class="note-image" src="${imageSrc}" alt="碎碎念图片">` : ''}<div class="note-text"></div></div></div></article>`;
+  }).join('');
   notesList.querySelectorAll('.note-item').forEach((card) => {
     const item = data.find((entry) => entry.id === card.dataset.id);
     card.querySelector('.note-text').textContent = item.content;
@@ -148,3 +152,6 @@ updateCount();
 setStatus('准备发布');
 render();
 </script>
+
+
+

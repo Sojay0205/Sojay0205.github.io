@@ -19,19 +19,19 @@
   <meta name="author" content="Sojay">
   <meta name="keywords" content="">
   
-    <meta name="description" content="碎碎念                           碎碎念         一些莫名其妙的想法，记录生活、心情与灵感。              管理                                    移除图片                        上传图片                  可选，支持常见图片格式">
+    <meta name="description" content="碎碎念         随时记录一点短内容，也可以配图。              管理                                    移除图片                        上传图片                  未选择图片                               0 &#x2F; 300">
 <meta property="og:type" content="website">
 <meta property="og:title" content="碎碎念">
 <meta property="og:url" content="https://sojay0205.github.io/notes/index.html">
 <meta property="og:site_name" content="Sojay&#39;s Blog">
-<meta property="og:description" content="碎碎念                           碎碎念         一些莫名其妙的想法，记录生活、心情与灵感。              管理                                    移除图片                        上传图片                  可选，支持常见图片格式">
+<meta property="og:description" content="碎碎念         随时记录一点短内容，也可以配图。              管理                                    移除图片                        上传图片                  未选择图片                               0 &#x2F; 300">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sojay0205.github.io/notes/$%7Bnote.image_url%7D">
-<meta property="article:published_time" content="2026-07-12T11:23:08.564Z">
-<meta property="article:modified_time" content="2026-07-12T11:23:08.564Z">
+<meta property="og:image" content="https://sojay0205.github.io/notes/$%7Bitem.website%7D">
+<meta property="article:published_time" content="2026-07-13T03:53:32.990Z">
+<meta property="article:modified_time" content="2026-07-13T03:53:32.990Z">
 <meta property="article:author" content="Sojay">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://sojay0205.github.io/notes/$%7Bnote.image_url%7D">
+<meta name="twitter:image" content="https://sojay0205.github.io/notes/$%7Bitem.website%7D">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -356,220 +356,154 @@
                 
 
 <article class="page-content">
-  <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>碎碎念</title>
-</head>
-<body>
-<div class="thoughts-page">
+  <div class="thoughts-page">
   <div class="thoughts-shell">
     <header class="thoughts-header">
       <div>
         <h1 id="碎碎念">碎碎念</h1>
-        <p>一些莫名其妙的想法，记录生活、心情与灵感。</p>
+        <p>随时记录一点短内容，也可以配图。</p>
       </div>
       <a class="manage-link" href="/notes/manage/">管理</a>
     </header>
 
     <section class="composer-card">
       <div id="imagePreviewWrap" class="image-preview-wrap" hidden>
-        <img id="imagePreview" alt="预览" />
+        <img id="imagePreview" alt="预览图" />
         <button type="button" id="removeImageBtn" class="remove-image-btn">移除图片</button>
       </div>
 
       <div class="upload-row">
         <label class="upload-btn" for="imageInput">上传图片</label>
         <input id="imageInput" type="file" accept="image/*" hidden />
-        <span id="uploadHint" class="upload-hint">可选，支持常见图片格式</span>
+        <span id="uploadHint" class="upload-hint">未选择图片</span>
       </div>
 
-      <textarea id="noteInput" maxlength="300" placeholder="写下一条碎碎念…"></textarea>
+      <textarea id="noteInput" maxlength="300" placeholder="写点今天的碎碎念吧"></textarea>
       <div class="composer-footer">
         <span id="countHint">0 / 300</span>
         <button type="button" id="publishBtn">发布</button>
       </div>
-      <p id="statusText" class="status-text">加载中…</p>
+      <p id="statusText" class="status-text">等待发布</p>
     </section>
 
     <section id="notesList" class="timeline"></section>
   </div>
 </div>
-
 <style>
-.thoughts-page{max-width:980px;margin:0 auto;padding:1.5rem 1rem 3rem}
-.thoughts-shell{max-width:760px;margin:0 auto}
-.thoughts-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.4rem}
-.thoughts-header h1{font-size:2.1rem;line-height:1.1;margin:0 0 .5rem}
-.thoughts-header p{margin:0;color:var(--text-color-3,#8a8a8a);font-size:1rem}
-.manage-link{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .95rem;border-radius:999px;border:1px solid rgba(127,127,127,.18);background:rgba(255,255,255,.05);white-space:nowrap}
-.composer-card,.note-card{background:var(--card-bg-color,#111);border:1px solid rgba(127,127,127,.14);border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.04)}
-.composer-card{padding:1rem 1rem 1.1rem;margin-bottom:1rem}
-.image-preview-wrap{position:relative;margin-bottom:.9rem;overflow:hidden;border-radius:16px;border:1px solid rgba(127,127,127,.14);background:rgba(0,0,0,.08)}
-.image-preview-wrap img{display:block;width:100%;max-height:420px;object-fit:cover}
-.remove-image-btn{position:absolute;top:.7rem;right:.7rem;border:0;border-radius:999px;padding:.45rem .75rem;background:rgba(0,0,0,.62);color:#fff;cursor:pointer}
-.upload-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.85rem}
-.upload-btn{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .95rem;border-radius:999px;border:1px solid rgba(127,127,127,.18);background:rgba(255,255,255,.05);cursor:pointer;user-select:none}
-.upload-hint{color:var(--text-color-3,#8a8a8a);font-size:.9rem}
-#noteInput{width:100%;min-height:110px;resize:vertical;border:0;outline:none;background:transparent;color:inherit;font-size:1rem;line-height:1.75;padding:.1rem 0 .5rem}
-.composer-footer{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-top:.3rem}
-#publishBtn{border:0;border-radius:999px;padding:.6rem 1rem;cursor:pointer;transition:.2s ease;background:var(--btn-bg-color,#1e80ff);color:#fff;font-weight:600}
-#publishBtn:hover,.manage-link:hover{opacity:.92}
-.status-text{margin:.75rem 0 0;color:var(--text-color-3,#8a8a8a);font-size:.9rem}
-.timeline{position:relative;padding-left:1.8rem;margin-top:1.4rem}
-.timeline::before{content:"";position:absolute;left:.52rem;top:0;bottom:0;width:1px;background:rgba(127,127,127,.18)}
-.note-item{position:relative;margin-bottom:1.15rem;padding-left:.8rem}
-.note-item::before{content:"";position:absolute;left:-.16rem;top:1rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--accent-color,#f1b34d);box-shadow:0 0 0 5px rgba(241,179,77,.12)}
-.note-card{padding:1rem 1.05rem}
-.note-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.65rem;color:var(--text-color-3,#8a8a8a);font-size:.9rem}
-.note-body{display:grid;gap:.85rem}
-.note-image{width:100%;max-height:520px;object-fit:cover;border-radius:14px;border:1px solid rgba(127,127,127,.12);background:rgba(0,0,0,.08)}
-.note-text{white-space:pre-wrap;word-break:break-word;line-height:1.9;font-size:1rem}
-.note-empty{padding:2rem 1rem;text-align:center;color:var(--text-color-3,#8a8a8a)}
-@media (max-width: 640px){
-  .thoughts-page{padding:1rem .8rem 2rem}
-  .thoughts-header{align-items:flex-start;flex-direction:column}
-  .composer-card,.note-card{border-radius:16px}
-  .upload-row,.composer-footer{flex-direction:column;align-items:stretch}
-  .upload-hint{width:100%}
-  #publishBtn,.manage-link,.upload-btn{width:100%}
-  .timeline{padding-left:1.35rem}
-}
+.thoughts-page{max-width:980px;margin:0 auto;padding:1.5rem 1rem 3rem}.thoughts-shell{max-width:760px;margin:0 auto}.thoughts-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.4rem}.thoughts-header h1{font-size:2.1rem;line-height:1.1;margin:0 0 .5rem}.thoughts-header p{margin:0;color:var(--text-color-3,#8a8a8a);font-size:1rem}.manage-link{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .95rem;border-radius:999px;border:1px solid rgba(127,127,127,.18);background:rgba(255,255,255,.05);white-space:nowrap}.composer-card,.note-card{background:var(--card-bg-color,#111);border:1px solid rgba(127,127,127,.14);border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.04)}.composer-card{padding:1rem 1rem 1.1rem;margin-bottom:1rem}.image-preview-wrap{position:relative;margin-bottom:.9rem;overflow:hidden;border-radius:16px;border:1px solid rgba(127,127,127,.14);background:rgba(0,0,0,.08)}.image-preview-wrap img{display:block;width:100%;max-height:420px;object-fit:cover}.remove-image-btn{position:absolute;top:.7rem;right:.7rem;border:0;border-radius:999px;padding:.45rem .75rem;background:rgba(0,0,0,.62);color:#fff;cursor:pointer}.upload-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.85rem}.upload-btn{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .95rem;border-radius:999px;border:1px solid rgba(127,127,127,.18);background:rgba(255,255,255,.05);cursor:pointer;user-select:none}.upload-hint{color:var(--text-color-3,#8a8a8a);font-size:.9rem}#noteInput{width:100%;min-height:110px;resize:vertical;border:0;outline:none;background:transparent;color:inherit;font-size:1rem;line-height:1.75;padding:.1rem 0 .5rem}.composer-footer{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-top:.3rem}#publishBtn{border:0;border-radius:999px;padding:.6rem 1rem;cursor:pointer;transition:.2s ease;background:var(--btn-bg-color,#1e80ff);color:#fff;font-weight:600}#publishBtn:hover,.manage-link:hover{opacity:.92}.status-text{margin:.75rem 0 0;color:var(--text-color-3,#8a8a8a);font-size:.9rem}.timeline{position:relative;padding-left:1.8rem;margin-top:1.4rem}.timeline::before{content:"";position:absolute;left:.52rem;top:0;bottom:0;width:1px;background:rgba(127,127,127,.18)}.note-item{position:relative;margin-bottom:1.15rem;padding-left:.8rem}.note-item::before{content:"";position:absolute;left:-.16rem;top:1rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--accent-color,#f1b34d);box-shadow:0 0 0 5px rgba(241,179,77,.12)}.note-card{padding:1rem 1.05rem}.note-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.65rem;color:var(--text-color-3,#8a8a8a);font-size:.9rem}.note-body{display:grid;gap:.85rem}.note-image{width:100%;max-height:520px;object-fit:cover;border-radius:14px;border:1px solid rgba(127,127,127,.12);background:rgba(0,0,0,.08)}.note-text{white-space:pre-wrap;word-break:break-word;line-height:1.9;font-size:1rem}.note-empty{padding:2rem 1rem;text-align:center;color:var(--text-color-3,#8a8a8a)}@media (max-width: 640px){.thoughts-page{padding:1rem .8rem 2rem}.thoughts-header{align-items:flex-start;flex-direction:column}.composer-card,.note-card{border-radius:16px}.upload-row,.composer-footer{flex-direction:column;align-items:stretch}.upload-hint{width:100%}#publishBtn,.manage-link,.upload-btn{width:100%}.timeline{padding-left:1.35rem}}
 </style>
-
 <script type="module">
-  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-
-  const SUPABASE_URL = 'https://eqkcyfkhnihdchmcfdcw.supabase.co';
-  const SUPABASE_ANON_KEY = 'sb_publishable_4Y_S9gtbbOoa99cPZsKEbg_gaIw1GPW';
-  const TABLE_NAME = 'notes';
-  const BUCKET_NAME = 'thoughts-images';
-
-  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-    auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const SUPABASE_URL = 'https://eqkcyfkhnihdchmcfdcw.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_4Y_S9gtbbOoa99cPZsKEbg_gaIw1GPW';
+const COMMENTS_TABLE = 'comments';
+const THREAD_KEY = 'notes';
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
+const noteInput = document.getElementById('noteInput');
+const publishBtn = document.getElementById('publishBtn');
+const notesList = document.getElementById('notesList');
+const countHint = document.getElementById('countHint');
+const statusText = document.getElementById('statusText');
+const imageInput = document.getElementById('imageInput');
+const imagePreviewWrap = document.getElementById('imagePreviewWrap');
+const imagePreview = document.getElementById('imagePreview');
+const removeImageBtn = document.getElementById('removeImageBtn');
+const uploadHint = document.getElementById('uploadHint');
+let selectedFile = null;
+let selectedBlobUrl = '';
+const setStatus = (text) => { statusText.textContent = text; };
+const updateCount = () => { countHint.textContent = `${noteInput.value.length} / 300`; };
+const clearImageSelection = () => {
+  selectedFile = null;
+  imageInput.value = '';
+  if (selectedBlobUrl) URL.revokeObjectURL(selectedBlobUrl);
+  selectedBlobUrl = '';
+  imagePreviewWrap.hidden = true;
+  imagePreview.removeAttribute('src');
+  uploadHint.textContent = '未选择图片';
+};
+imageInput.addEventListener('change', () => {
+  const file = imageInput.files?.[0];
+  if (!file) {
+    clearImageSelection();
+    return;
+  }
+  if (!file.type.startsWith('image/')) {
+    setStatus('请选择图片文件。');
+    clearImageSelection();
+    return;
+  }
+  selectedFile = file;
+  if (selectedBlobUrl) URL.revokeObjectURL(selectedBlobUrl);
+  selectedBlobUrl = URL.createObjectURL(file);
+  imagePreview.src = selectedBlobUrl;
+  imagePreviewWrap.hidden = false;
+  uploadHint.textContent = file.name;
+  setStatus('图片已选择');
+});
+removeImageBtn.addEventListener('click', clearImageSelection);
+const uploadImage = async (file) => {
+  const extension = (file.name.split('.').pop() || 'jpg').toLowerCase();
+  const safeName = `${Date.now()}-${Math.random().toString(16).slice(2)}.${extension}`;
+  const { error } = await supabase.storage.from('thoughts-images').upload(safeName, file, { contentType: file.type, upsert: false });
+  if (error) throw error;
+  const { data } = supabase.storage.from('thoughts-images').getPublicUrl(safeName);
+  return data.publicUrl;
+};
+const formatTime = (value) => new Date(value).toLocaleString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+const render = async () => {
+  const { data, error } = await supabase.from(COMMENTS_TABLE).select('id, content, website, created_at').eq('scope', 'notes').eq('thread_key', THREAD_KEY).is('parent_id', null).order('created_at', { ascending: false });
+  if (error) {
+    notesList.innerHTML = `<div class="note-empty">加载失败：${error.message}</div>`;
+    return;
+  }
+  if (!data.length) {
+    notesList.innerHTML = '<div class="note-empty">还没有内容，先留下第一条吧。</div>';
+    return;
+  }
+  notesList.innerHTML = data.map((item) => `<article class="note-item" data-id="${item.id}"><div class="note-card"><div class="note-head"><time>${formatTime(item.created_at)}</time></div><div class="note-body">${item.website ? `<img class="note-image" src="${item.website}" srcset="/img/loading.gif" lazyload alt="碎碎念图片">` : ''}<div class="note-text"></div></div></div></article>`).join('');
+  notesList.querySelectorAll('.note-item').forEach((card) => {
+    const item = data.find((entry) => entry.id === card.dataset.id);
+    card.querySelector('.note-text').textContent = item.content;
   });
-
-  const noteInput = document.getElementById('noteInput');
-  const publishBtn = document.getElementById('publishBtn');
-  const notesList = document.getElementById('notesList');
-  const countHint = document.getElementById('countHint');
-  const statusText = document.getElementById('statusText');
-  const imageInput = document.getElementById('imageInput');
-  const imagePreviewWrap = document.getElementById('imagePreviewWrap');
-  const imagePreview = document.getElementById('imagePreview');
-  const removeImageBtn = document.getElementById('removeImageBtn');
-  const uploadHint = document.getElementById('uploadHint');
-
-  let selectedFile = null;
-
-  const formatTime = (value) => new Date(value).toLocaleString('zh-CN', {
-    year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'
-  });
-
-  const setStatus = (message) => { statusText.textContent = message; };
-  const updateCount = () => { countHint.textContent = `${noteInput.value.length} / 300`; };
-
-  const clearImageSelection = () => {
-    selectedFile = null;
-    imageInput.value = '';
-    imagePreviewWrap.hidden = true;
-    imagePreview.removeAttribute('src');
-    uploadHint.textContent = '可选，支持常见图片格式';
-  };
-
-  imageInput.addEventListener('change', () => {
-    const file = imageInput.files?.[0];
-    if (!file) return clearImageSelection();
-    if (!file.type.startsWith('image/')) {
-      setStatus('请选择图片文件。');
-      return clearImageSelection();
+};
+const publish = async () => {
+  const content = noteInput.value.trim();
+  if (!content && !selectedFile) {
+    setStatus('至少写点文字或者上传一张图片。');
+    return;
+  }
+  publishBtn.disabled = true;
+  setStatus('正在发布…');
+  try {
+    let imageUrl = null;
+    if (selectedFile) {
+      setStatus('正在上传图片…');
+      imageUrl = await uploadImage(selectedFile);
     }
-    selectedFile = file;
-    imagePreview.src = URL.createObjectURL(file);
-    imagePreviewWrap.hidden = false;
-    uploadHint.textContent = file.name;
-    setStatus('图片已选中');
-  });
-
-  removeImageBtn.addEventListener('click', clearImageSelection);
-
-  const uploadImage = async (file) => {
-    const ext = file.name.split('.').pop() || 'jpg';
-    const safeName = `${Date.now()}-${Math.random().toString(16).slice(2)}.${ext}`;
-    const { error } = await supabase.storage.from(BUCKET_NAME).upload(safeName, file, { contentType: file.type, upsert: false });
+    const { error } = await supabase.from(COMMENTS_TABLE).insert({ scope: 'notes', thread_key: THREAD_KEY, parent_id: null, content, website: imageUrl, name: 'anonymous' });
     if (error) throw error;
-    const { data } = supabase.storage.from(BUCKET_NAME).getPublicUrl(safeName);
-    return data.publicUrl;
-  };
-
-  const renderNotes = async () => {
-    const { data, error } = await supabase.from(TABLE_NAME).select('id, content, image_url, created_at').order('created_at', { ascending: false });
-    if (error) {
-      notesList.innerHTML = `<div class="note-empty">加载失败：${error.message}</div>`;
-      return;
-    }
-    if (!data.length) {
-      notesList.innerHTML = '<div class="note-empty">还没有碎碎念，先写第一条吧。</div>';
-      return;
-    }
-
-    notesList.innerHTML = data.map(note => `
-      <article class="note-item" data-id="${note.id}">
-        <div class="note-card">
-          <div class="note-head"><time>${formatTime(note.created_at)}</time></div>
-          <div class="note-body">
-            ${note.image_url ? `<img class="note-image" src="${note.image_url}" srcset="/img/loading.gif" lazyload alt="碎碎念图片">` : ''}
-            <div class="note-text"></div>
-          </div>
-        </div>
-      </article>
-    `).join('');
-
-    notesList.querySelectorAll('.note-item').forEach((item) => {
-      const note = data.find((entry) => entry.id === item.dataset.id);
-      item.querySelector('.note-text').textContent = note.content;
-    });
-  };
-
-  const publish = async () => {
-    const content = noteInput.value.trim();
-    if (!content && !selectedFile) return;
-    publishBtn.disabled = true;
-    setStatus('正在发布…');
-    try {
-      let imageUrl = null;
-      if (selectedFile) {
-        setStatus('正在上传图片…');
-        imageUrl = await uploadImage(selectedFile);
-      }
-      const { error } = await supabase.from(TABLE_NAME).insert({ content, image_url: imageUrl });
-      if (error) throw error;
-      noteInput.value = '';
-      updateCount();
-      clearImageSelection();
-      await renderNotes();
-      setStatus('已发布');
-    } catch (error) {
-      setStatus(`发布失败：${error.message}`);
-    } finally {
-      publishBtn.disabled = false;
-    }
-  };
-
-  publishBtn.addEventListener('click', publish);
-  noteInput.addEventListener('input', updateCount);
-  noteInput.addEventListener('keydown', (event) => { if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') publish(); });
-
-  const init = async () => { updateCount(); setStatus('可以直接发布碎碎念'); await renderNotes(); };
-  init();
+    noteInput.value = '';
+    updateCount();
+    clearImageSelection();
+    await render();
+    setStatus('发布成功');
+  } catch (error) {
+    setStatus(`发布失败：${error.message}`);
+  } finally {
+    publishBtn.disabled = false;
+  }
+};
+publishBtn.addEventListener('click', publish);
+noteInput.addEventListener('input', updateCount);
+noteInput.addEventListener('keydown', (event) => { if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') publish(); });
+updateCount();
+setStatus('准备发布');
+render();
 </script>
-</body>
-</html>
 
 
-  
+  ﻿
 
 </article>
 

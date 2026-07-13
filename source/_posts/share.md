@@ -1,4 +1,5 @@
 ---
+comments: true
 title: share
 date: 2026-06-11 12:22:21
 tags: share

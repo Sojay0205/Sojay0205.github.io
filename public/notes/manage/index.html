@@ -19,15 +19,15 @@
   <meta name="author" content="Sojay">
   <meta name="keywords" content="">
   
-    <meta name="description" content="?????                  ????????????????????????       ?????                 ??????       ????                .thoughts-page{max-width:980px;margin:0 auto;padding:1.5rem 1rem 3rem}.thoughts-">
+    <meta name="description" content="管理         登录后可以查看并删除内容。              返回                                    发送登录链接              等待操作                 .thoughts-page{max-width:980px;margin:0 auto;padding:1.5rem">
 <meta property="og:type" content="website">
-<meta property="og:title" content="?????">
+<meta property="og:title" content="管理">
 <meta property="og:url" content="https://sojay0205.github.io/notes/manage/index.html">
 <meta property="og:site_name" content="Sojay&#39;s Blog">
-<meta property="og:description" content="?????                  ????????????????????????       ?????                 ??????       ????                .thoughts-page{max-width:980px;margin:0 auto;padding:1.5rem 1rem 3rem}.thoughts-">
+<meta property="og:description" content="管理         登录后可以查看并删除内容。              返回                                    发送登录链接              等待操作                 .thoughts-page{max-width:980px;margin:0 auto;padding:1.5rem">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-07-12T17:35:30.145Z">
-<meta property="article:modified_time" content="2026-07-12T17:35:30.145Z">
+<meta property="article:published_time" content="2026-07-13T02:23:46.707Z">
+<meta property="article:modified_time" content="2026-07-13T02:23:46.707Z">
 <meta property="article:author" content="Sojay">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -35,7 +35,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>????? - Sojay&#39;s Blog</title>
+  <title>管理 - Sojay&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -324,7 +324,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="?????"></span>
+            <span id="subtitle" data-typed-text="管理"></span>
           
         </div>
 
@@ -354,45 +354,87 @@
                 
 
 <article class="page-content">
-  <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>?????</title>
-</head>
-<body>
-<div class="thoughts-page">
+  <div class="thoughts-page">
   <div class="thoughts-shell">
     <header class="thoughts-header">
-      <div><h1 id="default">?????</h1><p>???????????????????</p></div>
-      <a class="manage-link" href="/notes/">?????</a>
+      <div>
+        <h1 id="管理">管理</h1>
+        <p>登录后可以查看并删除内容。</p>
+      </div>
+      <a class="manage-link" href="/notes/">返回</a>
     </header>
+
     <section class="auth-card">
-      <div class="auth-row"><input id="emailInput" type="email" placeholder="?????????" /><button type="button" id="loginBtn">??????</button></div>
-      <p id="statusText" class="status-text">????</p>
+      <div class="auth-row">
+        <input id="emailInput" type="email" placeholder="输入管理员邮箱登录" />
+        <button type="button" id="loginBtn">发送登录链接</button>
+      </div>
+      <p id="statusText" class="status-text">等待操作</p>
     </section>
+
     <section id="notesList" class="timeline"></section>
   </div>
 </div>
 <style>
-.thoughts-page{max-width:980px;margin:0 auto;padding:1.5rem 1rem 3rem}.thoughts-shell{max-width:760px;margin:0 auto}.thoughts-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.4rem}.thoughts-header h1{font-size:2.1rem;line-height:1.1;margin:0 0 .5rem}.thoughts-header p{margin:0;color:var(--text-color-3,#8a8a8a);font-size:1rem}.manage-link{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .95rem;border-radius:999px;border:1px solid rgba(127,127,127,.18);background:rgba(255,255,255,.05);white-space:nowrap}.auth-card,.note-card{background:var(--card-bg-color,#111);border:1px solid rgba(127,127,127,.14);border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.04)}.auth-card{padding:1rem 1rem 1.1rem;margin-bottom:1rem}.auth-row{display:flex;gap:.75rem;align-items:center}.auth-row input{flex:1;min-width:0;border:1px solid rgba(127,127,127,.18);border-radius:999px;padding:.7rem 1rem;background:transparent;color:inherit;outline:none}.auth-row input:focus{border-color:var(--btn-bg-color,#1e80ff)}#loginBtn,.delete-btn{border:0;border-radius:999px;padding:.6rem 1rem;cursor:pointer;background:var(--btn-bg-color,#1e80ff);color:#fff;font-weight:600}.status-text{margin:.75rem 0 0;color:var(--text-color-3,#8a8a8a);font-size:.9rem}.timeline{position:relative;padding-left:1.8rem;margin-top:1.4rem}.timeline::before{content:"";position:absolute;left:.52rem;top:0;bottom:0;width:1px;background:rgba(127,127,127,.18)}.note-item{position:relative;margin-bottom:1.15rem;padding-left:.8rem}.note-item::before{content:"";position:absolute;left:-.16rem;top:1rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--accent-color,#f1b34d);box-shadow:0 0 0 5px rgba(241,179,77,.12)}.note-card{padding:1rem 1.05rem}.note-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.65rem;color:var(--text-color-3,#8a8a8a);font-size:.9rem}.note-text{white-space:pre-wrap;word-break:break-word;line-height:1.9;font-size:1rem}.note-actions{display:flex;justify-content:flex-end;gap:.5rem;margin-top:.8rem;flex-wrap:wrap}.note-delete{background:rgba(255,82,82,.1);color:#ff5f5f;border:0;border-radius:999px;padding:.6rem 1rem}.note-empty{padding:2rem 1rem;text-align:center;color:var(--text-color-3,#8a8a8a)}@media (max-width:640px){.thoughts-page{padding:1rem .8rem 2rem}.thoughts-header{align-items:flex-start;flex-direction:column}.auth-card,.note-card{border-radius:16px}.auth-row{flex-direction:column;align-items:stretch}#loginBtn,.manage-link{width:100%}.timeline{padding-left:1.35rem}}
+.thoughts-page{max-width:980px;margin:0 auto;padding:1.5rem 1rem 3rem}.thoughts-shell{max-width:760px;margin:0 auto}.thoughts-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.4rem}.thoughts-header h1{font-size:2.1rem;line-height:1.1;margin:0 0 .5rem}.thoughts-header p{margin:0;color:var(--text-color-3,#8a8a8a);font-size:1rem}.manage-link{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .95rem;border-radius:999px;border:1px solid rgba(127,127,127,.18);background:rgba(255,255,255,.05);white-space:nowrap}.auth-card,.note-card{background:var(--card-bg-color,#111);border:1px solid rgba(127,127,127,.14);border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.04)}.auth-card{padding:1rem 1rem 1.1rem;margin-bottom:1rem}.auth-row{display:flex;gap:.75rem;align-items:center}.auth-row input{flex:1;min-width:0;border:1px solid rgba(127,127,127,.18);border-radius:999px;padding:.7rem 1rem;background:transparent;color:inherit;outline:none}.auth-row input:focus{border-color:var(--btn-bg-color,#1e80ff)}#loginBtn,.note-delete{border:0;border-radius:999px;padding:.6rem 1rem;cursor:pointer;background:var(--btn-bg-color,#1e80ff);color:#fff;font-weight:600}.status-text{margin:.75rem 0 0;color:var(--text-color-3,#8a8a8a);font-size:.9rem}.timeline{position:relative;padding-left:1.8rem;margin-top:1.4rem}.timeline::before{content:"";position:absolute;left:.52rem;top:0;bottom:0;width:1px;background:rgba(127,127,127,.18)}.note-item{position:relative;margin-bottom:1.15rem;padding-left:.8rem}.note-item::before{content:"";position:absolute;left:-.16rem;top:1rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--accent-color,#f1b34d);box-shadow:0 0 0 5px rgba(241,179,77,.12)}.note-card{padding:1rem 1.05rem}.note-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.65rem;color:var(--text-color-3,#8a8a8a);font-size:.9rem}.note-text{white-space:pre-wrap;word-break:break-word;line-height:1.9;font-size:1rem}.note-actions{display:flex;justify-content:flex-end;gap:.5rem;margin-top:.8rem;flex-wrap:wrap}.note-delete{background:rgba(255,82,82,.1);color:#ff5f5f}.note-empty{padding:2rem 1rem;text-align:center;color:var(--text-color-3,#8a8a8a)}@media (max-width:640px){.thoughts-page{padding:1rem .8rem 2rem}.thoughts-header{align-items:flex-start;flex-direction:column}.auth-card,.note-card{border-radius:16px}.auth-row{flex-direction:column;align-items:stretch}#loginBtn,.manage-link{width:100%}.timeline{padding-left:1.35rem}}
 </style>
 <script type="module">
-  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-  const SUPABASE_URL='https://eqkcyfkhnihdchmcfdcw.supabase.co'; const SUPABASE_ANON_KEY='sb_publishable_4Y_S9gtbbOoa99cPZsKEbg_gaIw1GPW'; const ADMIN_EMAIL='1557754391@qq.com'; const COMMENTS_TABLE='comments';
-  const supabase=createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
-  const notesList=document.getElementById('notesList'); const statusText=document.getElementById('statusText'); const emailInput=document.getElementById('emailInput'); const loginBtn=document.getElementById('loginBtn');
-  const formatTime=v=>new Date(v).toLocaleString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}); const setStatus=t=>statusText.textContent=t; const getSession=async()=>{const{data}=await supabase.auth.getSession();return data.session||null}; const isAdmin=s=>Boolean(s?.user?.email&&s.user.email.toLowerCase()===ADMIN_EMAIL.toLowerCase());
-  const render=async()=>{const{data,error}=await supabase.from(COMMENTS_TABLE).select('id,name,email,content,created_at').eq('scope','board').eq('thread_key','board').is('parent_id',null).order('created_at',{ascending:false}); if(error){notesList.innerHTML=`<div class="note-empty">?????${error.message}</div>`;return;} const session=await getSession(); const admin=isAdmin(session); if(!data.length){notesList.innerHTML='<div class="note-empty">?????????????</div>';return;} notesList.innerHTML=data.map(item=>`<article class="note-item" data-id="${item.id}"><div class="note-card"><div class="note-head"><time>${formatTime(item.created_at)}</time></div><div class="note-text"></div>${admin?`<div class="note-actions"><button class="note-delete" type="button" data-delete="${item.id}">??</button></div>`:''}</div></article>`).join(''); notesList.querySelectorAll('.note-item').forEach(card=>{const item=data.find(entry=>entry.id===card.dataset.id); card.querySelector('.note-text').textContent=item.content;}); };
-  const remove=async(id)=>{const session=await getSession(); if(!isAdmin(session)){setStatus('???????????????');return;} if(!window.confirm('??????????'))return; const{error}=await supabase.from(COMMENTS_TABLE).delete().eq('id',id); if(error)setStatus(`?????${error.message}`); else{setStatus('???'); await render();}};
-  notesList.addEventListener('click',e=>{const t=e.target.closest('[data-delete]'); if(!t)return; remove(t.dataset.delete);}); loginBtn.addEventListener('click',async()=>{const email=emailInput.value.trim(); if(email.toLowerCase()!==ADMIN_EMAIL.toLowerCase()){setStatus('?????????'); return;} loginBtn.disabled=true; setStatus('?????????'); const{error}=await supabase.auth.signInWithOtp({email,options:{emailRedirectTo:window.location.href}}); if(error){setStatus(`?????${error.message}`); loginBtn.disabled=false; return;} setStatus('??????????????'); loginBtn.disabled=false;}); const init=async()=>{const session=await getSession(); setStatus(session&&isAdmin(session)?`?????${session.user.email}`:'??????????????'); await render(); supabase.auth.onAuthStateChange(async(_event,nextSession)=>{setStatus(nextSession&&isAdmin(nextSession)?`?????${nextSession.user.email}`:'??????????????'); await render();});}; init();
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const SUPABASE_URL = 'https://eqkcyfkhnihdchmcfdcw.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_4Y_S9gtbbOoa99cPZsKEbg_gaIw1GPW';
+const ADMIN_EMAIL = '1557754391@qq.com';
+const COMMENTS_TABLE = 'comments';
+const THREAD_KEY = 'notes';
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
+const notesList = document.getElementById('notesList');
+const statusText = document.getElementById('statusText');
+const emailInput = document.getElementById('emailInput');
+const loginBtn = document.getElementById('loginBtn');
+const formatTime = (value) => new Date(value).toLocaleString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+const setStatus = (text) => { statusText.textContent = text; };
+const getSession = async () => { const { data } = await supabase.auth.getSession(); return data.session || null; };
+const isAdmin = (session) => Boolean(session?.user?.email && session.user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase());
+const render = async () => {
+  const { data, error } = await supabase.from(COMMENTS_TABLE).select('id, content, created_at').eq('scope', 'notes').eq('thread_key', THREAD_KEY).is('parent_id', null).order('created_at', { ascending: false });
+  if (error) { notesList.innerHTML = `<div class="note-empty">加载失败：${error.message}</div>`; return; }
+  const session = await getSession();
+  const admin = isAdmin(session);
+  if (!data.length) { notesList.innerHTML = '<div class="note-empty">还没有碎碎念。</div>'; return; }
+  notesList.innerHTML = data.map((item) => `<article class="note-item" data-id="${item.id}"><div class="note-card"><div class="note-head"><time>${formatTime(item.created_at)}</time>${admin ? '<span>管理员</span>' : ''}</div><div class="note-text"></div>${admin ? `<div class="note-actions"><button class="note-delete" type="button" data-delete="${item.id}">删除</button></div>` : ''}</div></article>`).join('');
+  notesList.querySelectorAll('.note-item').forEach((card) => {
+    const item = data.find((entry) => entry.id === card.dataset.id);
+    card.querySelector('.note-text').textContent = item.content;
+  });
+};
+const login = async () => {
+  const email = emailInput.value.trim();
+  if (!email) { setStatus('请输入邮箱。'); return; }
+  loginBtn.disabled = true;
+  setStatus('正在发送登录链接…');
+  const redirectTo = `${window.location.origin}/notes/manage/`;
+  const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: redirectTo } });
+  if (error) setStatus(`发送失败：${error.message}`); else setStatus('已发送登录链接，请查看邮箱。');
+  loginBtn.disabled = false;
+};
+const remove = async (id) => {
+  const session = await getSession();
+  if (!isAdmin(session)) { setStatus('只有管理员邮箱登录后才能删除。'); return; }
+  if (!window.confirm('确定删除这条碎碎念吗？')) return;
+  const { error } = await supabase.from(COMMENTS_TABLE).delete().eq('id', id);
+  if (error) setStatus(`删除失败：${error.message}`); else { setStatus('已删除'); await render(); }
+};
+notesList.addEventListener('click', (event) => {
+  const target = event.target.closest('[data-delete]');
+  if (!target) return;
+  remove(target.dataset.delete);
+});
+loginBtn.addEventListener('click', login);
+setStatus('等待登录');
+render();
 </script>
-</body>
-</html>
 
 
-  
+  ﻿
 
 </article>
 

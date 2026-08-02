@@ -6,9 +6,9 @@
 
 # ----- 站点基本信息 -----
 title: Sojay's Blog        # 博客名称，可改成你喜欢的名字
-subtitle: ''                    # 副标题，留空
-description: '记录 分享'    # 博客简介
-keywords:
+subtitle: '记录生活，分享技术'   # 副标题
+description: "Sojay 的个人博客——记录生活、技术、AI 编程与思考，分享成长路上的所学所得"
+keywords: 博客,技术,AI,编程,生活,随笔,Claude Code,个人成长
 author: Sojay               # 作者名
 language: zh-CN                 # 语言：中文
 timezone: 'Asia/Shanghai'       # 时区

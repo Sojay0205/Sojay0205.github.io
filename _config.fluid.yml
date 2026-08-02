@@ -18,17 +18,20 @@ navbar:
     content: true
 
 index:
-  banner_img: ""
-  banner_img_height: 40
+  banner_img: "/img/banner.jpg"
+  banner_img_height: 60
   banner_mask_alpha: 0.3
   slogan:
-    enable: false
+    enable: true
+    text:
+      - "记录生活，分享技术"
+      - "Stay hungry, stay foolish"
   auto_excerpt:
     enable: true
     length: 120
 
 post:
-  banner_img: ""
+  banner_img: "/img/banner.jpg"
   banner_img_height: 30
   banner_mask_alpha: 0.3
   meta:
@@ -55,19 +58,20 @@ post:
   comments:
     enable: true
     type: supabase-messageboard
+  default_index_img: /img/banner.jpg
 
 archive:
-  banner_img: ""
+  banner_img: "/img/banner.jpg"
   banner_img_height: 30
   banner_mask_alpha: 0.3
 
 category:
-  banner_img: ""
+  banner_img: "/img/banner.jpg"
   banner_img_height: 30
   banner_mask_alpha: 0.3
 
 tag:
-  banner_img: ""
+  banner_img: "/img/banner.jpg"
   banner_img_height: 30
   banner_mask_alpha: 0.3
   tagcloud:
@@ -78,7 +82,7 @@ tag:
     end_color: "#337ab7"
 
 about:
-  banner_img: ""
+  banner_img: "/img/banner.jpg"
   banner_img_height: 30
   banner_mask_alpha: 0.3
   avatar: ""
@@ -87,14 +91,14 @@ about:
 
 page404:
   enable: true
-  banner_img: ""
+  banner_img: "/img/banner.jpg"
   banner_img_height: 30
   banner_mask_alpha: 0.3
 
 footer:
   content: '由 <a href="https://hexo.io" target="_blank">Hexo</a> 驱动，主题 <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank">Fluid</a>'
   statistics:
-    enable: true
+    enable: false
   beian:
     enable: false
 
@@ -109,8 +113,13 @@ lazyload:
   enable: true
   onlypost: false
 
+# 图标字体（添加 https 前缀避免协议问题）
+iconfont: https://at.alicdn.com/t/c/font_1736178_k526ubmyhba.css
+
 search:
   path: /local-search.xml
   field: post
   content: true
+
+
 

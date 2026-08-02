@@ -3,6 +3,7 @@ comments: true
 title: share
 date: 2026-06-11 12:22:21
 tags: share
+description: AI Coding 零基础实战教程——从零开始，用自然语言指挥 AI 构建真实软件项目，基于 Claude Code 深度实践。
 ---
 # AI Coding 零基础实战教程
 

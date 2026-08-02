@@ -58,7 +58,6 @@ post:
   comments:
     enable: true
     type: supabase-messageboard
-  default_index_img: /img/banner.jpg
 
 archive:
   banner_img: "/img/banner.jpg"

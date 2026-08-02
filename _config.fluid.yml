@@ -18,8 +18,8 @@ navbar:
     content: true
 
 index:
-  banner_img: "/img/banner.jpg"
-  banner_img_height: 60
+  banner_img: ""
+  banner_img_height: 30
   banner_mask_alpha: 0.3
   slogan:
     enable: true
@@ -31,7 +31,7 @@ index:
     length: 120
 
 post:
-  banner_img: "/img/banner.jpg"
+  banner_img: ""
   banner_img_height: 30
   banner_mask_alpha: 0.3
   meta:
@@ -60,17 +60,17 @@ post:
     type: supabase-messageboard
 
 archive:
-  banner_img: "/img/banner.jpg"
+  banner_img: ""
   banner_img_height: 30
   banner_mask_alpha: 0.3
 
 category:
-  banner_img: "/img/banner.jpg"
+  banner_img: ""
   banner_img_height: 30
   banner_mask_alpha: 0.3
 
 tag:
-  banner_img: "/img/banner.jpg"
+  banner_img: ""
   banner_img_height: 30
   banner_mask_alpha: 0.3
   tagcloud:
@@ -81,7 +81,7 @@ tag:
     end_color: "#337ab7"
 
 about:
-  banner_img: "/img/banner.jpg"
+  banner_img: ""
   banner_img_height: 30
   banner_mask_alpha: 0.3
   avatar: ""
@@ -90,7 +90,7 @@ about:
 
 page404:
   enable: true
-  banner_img: "/img/banner.jpg"
+  banner_img: ""
   banner_img_height: 30
   banner_mask_alpha: 0.3
 

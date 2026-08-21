@@ -85,6 +85,10 @@ include:
 exclude:
 ignore:
 
+# ----- 资源压缩(hexo-all-minifier)-----
+# 该插件 0.5.7 在 Node 20+ 下会把文章 HTML 压缩成 0 字节空文件,导致文章打不开,故禁用
+all_minifier: false
+
 # ----- 主题设置 -----
 theme: fluid
 theme_config:                    # 使用 Fluid 主题

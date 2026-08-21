@@ -1,0 +1,85 @@
+﻿<div class="post-message-board">
+  <div class="message-board-title">
+    <h2>留言板</h2>
+    <p>写下想说的话，评论会实时显示。</p>
+  </div>
+
+  <div class="post-message-box">
+    <div class="composer-grid single-field">
+      <input id="nameInput" class="field" type="text" maxlength="30" placeholder="名字" />
+    </div>
+    <textarea id="messageInput" class="message-input" maxlength="1200" placeholder="留下你的留言"></textarea>
+    <div class="composer-footer">
+      <span id="countHint">0 / 1200</span>
+      <button id="postMessageSend" type="button">提交留言</button>
+    </div>
+    <p id="statusText" class="status-text">准备留言</p>
+  </div>
+
+  <div id="messagesList" class="messages-list"></div>
+</div>
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const SUPABASE_URL = 'https://eqkcyfkhnihdchmcfdcw.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_4Y_S9gtbbOoa99cPZsKEbg_gaIw1GPW';
+const ADMIN_EMAIL = '1557754391@qq.com';
+const COMMENTS_TABLE = 'comments';
+const THREAD_KEY = location.pathname.replace(/\/+$/,'') || '/';
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
+const nameInput = document.getElementById('nameInput');
+const messageInput = document.getElementById('messageInput');
+const sendBtn = document.getElementById('postMessageSend');
+const statusText = document.getElementById('statusText');
+const countHint = document.getElementById('countHint');
+const messagesList = document.getElementById('messagesList');
+const setStatus = (text) => { statusText.textContent = text; };
+const count = () => { countHint.textContent = `${messageInput.value.length} / 1200`; };
+const formatTime = (value) => new Date(value).toLocaleString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+const safeText = (value) => (value || '').trim();
+const getSession = async () => { const { data } = await supabase.auth.getSession(); return data.session || null; };
+const isAdmin = (session) => Boolean(session?.user?.email && session.user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase());
+const avatarSeeds = ['leaf','sun','moon','star','cloud','wind','spark','wave','pebble','petal','sky','ember'];
+const avatarForId = (id) => {
+  const index = Array.from(String(id)).reduce((sum, char) => sum + char.charCodeAt(0), 0) % avatarSeeds.length;
+  return `https://api.dicebear.com/7.x/bottts-neutral/svg?seed=${encodeURIComponent(avatarSeeds[index])}`;
+};
+const render = async () => {
+  const { data, error } = await supabase.from(COMMENTS_TABLE).select('id, name, content, created_at').eq('scope', 'post').eq('thread_key', THREAD_KEY).is('parent_id', null).order('created_at', { ascending: false });
+  if (error) { messagesList.innerHTML = `<div class="note-empty">加载失败：${error.message}</div>`; return; }
+  const session = await getSession();
+  const admin = isAdmin(session);
+  if (!data.length) { messagesList.innerHTML = '<div class="note-empty">还没有留言，来做第一个吧。</div>'; return; }
+  messagesList.innerHTML = data.map((item) => `<article class="message-card" data-id="${item.id}"><div class="message-top"><img class="avatar" src="${avatarForId(item.id)}" alt="头像" /><div class="message-main"><div class="message-meta"><div class="message-name">${item.name || '匿名'}</div><div class="message-time">${formatTime(item.created_at)}</div></div><div class="message-text"></div>${admin ? `<div class="message-actions"><button class="delete-btn" type="button" data-delete="${item.id}">删除</button></div>` : ''}</div></div></article>`).join('');
+  messagesList.querySelectorAll('.message-card').forEach((card) => {
+    const item = data.find((entry) => entry.id === card.dataset.id);
+    card.querySelector('.message-text').textContent = item.content;
+  });
+};
+const submit = async () => {
+  const name = safeText(nameInput.value);
+  const content = safeText(messageInput.value);
+  if (!name || !content) { setStatus('名字和留言内容都要填写。'); return; }
+  sendBtn.disabled = true;
+  setStatus('正在提交…');
+  const { error } = await supabase.from(COMMENTS_TABLE).insert({ scope: 'post', thread_key: THREAD_KEY, parent_id: null, name, content });
+  if (error) setStatus(`提交失败：${error.message}`); else { nameInput.value = ''; messageInput.value = ''; count(); setStatus('已提交'); await render(); }
+  sendBtn.disabled = false;
+};
+const remove = async (id) => {
+  const session = await getSession();
+  if (!isAdmin(session)) { setStatus('只有管理员邮箱登录后才能删除。'); return; }
+  if (!window.confirm('确定删除这条留言吗？')) return;
+  const { error } = await supabase.from(COMMENTS_TABLE).delete().eq('id', id);
+  if (error) setStatus(`删除失败：${error.message}`); else { setStatus('已删除'); await render(); }
+};
+messagesList.addEventListener('click', (event) => { const target = event.target.closest('[data-delete]'); if (!target) return; remove(target.dataset.delete); });
+sendBtn.addEventListener('click', submit);
+messageInput.addEventListener('input', count);
+messageInput.addEventListener('keydown', (event) => { if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') submit(); });
+count();
+setStatus('欢迎留言');
+render();
+</script>
+<style>
+.post-message-board{margin-top:2.5rem}.message-board-title{margin-bottom:1rem}.message-board-title h2{margin:0 0 .25rem;font-size:1.6rem}.message-board-title p{margin:0;color:var(--text-color-3,#8a8a8a)}.post-message-box,.post-message-board .message-card{background:var(--card-bg-color,#111);border:1px solid rgba(127,127,127,.14);border-radius:18px}.post-message-box{padding:1rem 1rem 1.1rem;margin-bottom:1rem}.post-message-board .composer-grid{display:grid;grid-template-columns:1fr;gap:.75rem;margin-bottom:.85rem}.post-message-board .field,.post-message-board .message-input{border:1px solid rgba(127,127,127,.18);border-radius:14px;background:transparent;color:inherit;outline:none;width:100%}.post-message-board .field{padding:.8rem .85rem}.post-message-board .message-input{min-height:150px;resize:vertical;padding:.95rem;line-height:1.75}.post-message-board .composer-footer{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-top:.8rem}.post-message-board #postMessageSend,.post-message-board .delete-btn{border:0;border-radius:999px;padding:.6rem 1rem;cursor:pointer;background:var(--btn-bg-color,#1e80ff);color:#fff;font-weight:600}.post-message-board .messages-list{display:grid;gap:1rem}.post-message-board .message-card{padding:1rem}.post-message-board .message-top{display:flex;gap:.8rem;align-items:flex-start}.post-message-board .avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;background:rgba(255,255,255,.08);flex:0 0 auto}.post-message-board .message-main{flex:1;min-width:0}.post-message-board .message-meta{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.35rem;font-size:.95rem}.post-message-board .message-name{font-weight:700}.post-message-board .message-time{color:var(--text-color-3,#8a8a8a);font-size:.85rem}.post-message-board .message-text{white-space:pre-wrap;word-break:break-word;line-height:1.85;margin-top:.35rem}.post-message-board .message-actions{display:flex;justify-content:flex-end;gap:.5rem;margin-top:.8rem}.post-message-board .note-empty{padding:2rem 1rem;text-align:center;color:var(--text-color-3,#8a8a8a)}.post-message-board .status-text{margin:.75rem 0 0;color:var(--text-color-3,#8a8a8a);font-size:.9rem}@media (max-width:760px){.post-message-board .composer-footer{flex-direction:column;align-items:stretch}.post-message-board #postMessageSend{width:100%}}
+</style>

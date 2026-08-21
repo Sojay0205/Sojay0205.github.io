@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sojay0205.github.io/notes/manage/index.html</loc>
+    
+    <lastmod>2026-08-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://sojay0205.github.io/messages/index.html</loc>
     
     <lastmod>2026-08-21</lastmod>
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://sojay0205.github.io/notes/manage/index.html</loc>
+    <loc>https://sojay0205.github.io/about/index.html</loc>
     
     <lastmod>2026-08-21</lastmod>
     
@@ -65,15 +74,6 @@
   </url>
   
   <url>
-    <loc>https://sojay0205.github.io/about/index.html</loc>
-    
-    <lastmod>2026-08-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://sojay0205.github.io/2026/06/11/share/</loc>
     
     <lastmod>2026-08-21</lastmod>
@@ -99,14 +99,14 @@
   </url>
   
   <url>
-    <loc>https://sojay0205.github.io/tags/share/</loc>
+    <loc>https://sojay0205.github.io/tags/emotion/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://sojay0205.github.io/tags/emotion/</loc>
+    <loc>https://sojay0205.github.io/tags/share/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

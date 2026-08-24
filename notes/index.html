@@ -19,20 +19,16 @@
   <meta name="author" content="Sojay">
   <meta name="keywords" content="博客,技术,AI,编程,生活,随笔,Claude Code,个人成长">
   
-    <meta name="description" content="碎碎念         随时记录一点短内容，也可以配图。              管理                                    移除图片                        上传图片                  未选择图片                               0 &#x2F; 300">
+    <meta name="description" content="Sojay 的个人博客——记录生活、技术、AI 编程与思考，分享成长路上的所学所得">
 <meta property="og:type" content="website">
 <meta property="og:title" content="碎碎念">
 <meta property="og:url" content="https://sojay0205.github.io/notes/index.html">
 <meta property="og:site_name" content="Sojay&#39;s Blog">
-<meta property="og:description" content="碎碎念         随时记录一点短内容，也可以配图。              管理                                    移除图片                        上传图片                  未选择图片                               0 &#x2F; 300">
+<meta property="og:description" content="Sojay 的个人博客——记录生活、技术、AI 编程与思考，分享成长路上的所学所得">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sojay0205.github.io/notes/$%7Bitem.imageSrc%7D">
-<meta property="article:published_time" content="2026-08-23T16:49:02.830Z">
-<meta property="article:modified_time" content="2026-08-23T16:49:02.830Z">
 <meta property="article:author" content="Sojay">
 <meta property="article:tag" content="博客,技术,AI,编程,生活,随笔,Claude Code,个人成长">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://sojay0205.github.io/notes/$%7Bitem.imageSrc%7D">
   
   
   
@@ -41,6 +37,12 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -62,6 +64,10 @@
     <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
+
+
+  
+<link rel="stylesheet" href="/css/thoughts.css">
 
 
 
@@ -90,7 +96,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 30vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -162,7 +168,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/notes/" target="_self">
                 <i class="iconfont icon-edit"></i>
-                <span>notes</span>
+                <span>碎碎念</span>
               </a>
             </li>
           
@@ -174,7 +180,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/messages/" target="_self">
                 <i class="iconfont icon-comment"></i>
-                <span>messages</span>
+                <span>留言板</span>
               </a>
             </li>
           
@@ -269,7 +275,7 @@
               <a href="/notes/" target="_self">
                 <div class="mobile-grid-item">
                   <i class="iconfont icon-edit"></i>
-                  <span>notes</span>
+                  <span>碎碎念</span>
                 </div>
               </a>
             </div>
@@ -283,7 +289,7 @@
               <a href="/messages/" target="_self">
                 <div class="mobile-grid-item">
                   <i class="iconfont icon-comment"></i>
-                  <span>messages</span>
+                  <span>留言板</span>
                 </div>
               </a>
             </div>
@@ -319,13 +325,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="碎碎念"></span>
+            <span id="subtitle" data-typed-text="一些不成文的瞬间，记录生活、心情与灵感"></span>
           
         </div>
 
@@ -354,173 +360,597 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<article class="page-content">
-  <div class="thoughts-page">
-  <div class="thoughts-shell">
-    <header class="thoughts-header">
-      <div>
-        <h1 id="碎碎念">碎碎念</h1>
-        <p>随时记录一点短内容，也可以配图。</p>
-      </div>
-      <a class="manage-link" href="/notes/manage/">管理</a>
-    </header>
 
-    <section class="composer-card">
-      <div id="imagePreviewWrap" class="image-preview-wrap" hidden>
-        <img id="imagePreview" alt="预览图" />
-        <button type="button" id="removeImageBtn" class="remove-image-btn">移除图片</button>
-      </div>
+<section class="thoughts-header text-center mb-4">
+  <h1 class="thoughts-title">碎碎念</h1>
+  <p class="thoughts-subtitle text-muted">一些不成文的瞬间，记录生活、心情与灵感，共 20 条。</p>
+  
+    <a class="thoughts-write-btn" href="https://github.com/Sojay0205/Sojay0205.github.io/issues/new?labels=thought&amp;title=%E7%A2%8E%E7%A2%8E%E5%BF%B5&amp;body=%3C!--%20%E5%9C%A8%E8%BF%99%E9%87%8C%E5%86%99%E7%A2%8E%E7%A2%8E%E5%BF%B5%E5%86%85%E5%AE%B9%EF%BC%8C%E6%94%AF%E6%8C%81%20Markdown%E3%80%81%E6%8D%A2%E8%A1%8C%E3%80%81%E9%93%BE%E6%8E%A5%EF%BC%9B%E5%9B%BE%E7%89%87%E7%9B%B4%E6%8E%A5%E7%B2%98%E8%B4%B4%E6%88%96%E6%8B%96%E5%85%A5%E5%8D%B3%E5%8F%AF%20--%3E" target="_blank" rel="noopener">写一条</a>
+  
+</section>
 
-      <div class="upload-row">
-        <label class="upload-btn" for="imageInput">上传图片</label>
-        <input id="imageInput" type="file" accept="image/*" hidden />
-        <span id="uploadHint" class="upload-hint">未选择图片</span>
-      </div>
-
-      <textarea id="noteInput" maxlength="300" placeholder="写点今天的碎碎念吧"></textarea>
-      <div class="composer-footer">
-        <span id="countHint">0 / 300</span>
-        <button type="button" id="publishBtn">发布</button>
-      </div>
-      <p id="statusText" class="status-text">等待发布</p>
-    </section>
-
-    <section id="notesList" class="timeline"></section>
-  </div>
-</div>
-<style>
-.thoughts-page{max-width:980px;margin:0 auto;padding:1.5rem 1rem 3rem}.thoughts-shell{max-width:760px;margin:0 auto}.thoughts-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.4rem}.thoughts-header h1{font-size:2.1rem;line-height:1.1;margin:0 0 .5rem}.thoughts-header p{margin:0;color:var(--text-color-3,#8a8a8a);font-size:1rem}.manage-link{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .95rem;border-radius:999px;border:1px solid rgba(127,127,127,.18);background:rgba(255,255,255,.05);white-space:nowrap}.composer-card,.note-card{background:var(--card-bg-color,#111);border:1px solid rgba(127,127,127,.14);border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.04)}.composer-card{padding:1rem 1rem 1.1rem;margin-bottom:1rem}.image-preview-wrap{position:relative;margin-bottom:.9rem;overflow:hidden;border-radius:16px;border:1px solid rgba(127,127,127,.14);background:rgba(0,0,0,.08)}.image-preview-wrap img{display:block;width:100%;max-height:420px;object-fit:cover}.remove-image-btn{position:absolute;top:.7rem;right:.7rem;border:0;border-radius:999px;padding:.45rem .75rem;background:rgba(0,0,0,.62);color:#fff;cursor:pointer}.upload-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.85rem}.upload-btn{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .95rem;border-radius:999px;border:1px solid rgba(127,127,127,.18);background:rgba(255,255,255,.05);cursor:pointer;user-select:none}.upload-hint{color:var(--text-color-3,#8a8a8a);font-size:.9rem}#noteInput{width:100%;min-height:110px;resize:vertical;border:0;outline:none;background:transparent;color:inherit;font-size:1rem;line-height:1.75;padding:.1rem 0 .5rem}.composer-footer{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-top:.3rem}#publishBtn{border:0;border-radius:999px;padding:.6rem 1rem;cursor:pointer;transition:.2s ease;background:var(--btn-bg-color,#1e80ff);color:#fff;font-weight:600}#publishBtn:hover,.manage-link:hover{opacity:.92}.status-text{margin:.75rem 0 0;color:var(--text-color-3,#8a8a8a);font-size:.9rem}.timeline{position:relative;padding-left:1.8rem;margin-top:1.4rem}.timeline::before{content:"";position:absolute;left:.52rem;top:0;bottom:0;width:1px;background:rgba(127,127,127,.18)}.note-item{position:relative;margin-bottom:1.15rem;padding-left:.8rem}.note-item::before{content:"";position:absolute;left:-.16rem;top:1rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--accent-color,#f1b34d);box-shadow:0 0 0 5px rgba(241,179,77,.12)}.note-card{padding:1rem 1.05rem}.note-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.65rem;color:var(--text-color-3,#8a8a8a);font-size:.9rem}.note-body{display:grid;gap:.85rem}.note-image{width:100%;max-height:520px;object-fit:cover;border-radius:14px;border:1px solid rgba(127,127,127,.12);background:rgba(0,0,0,.08)}.note-text{white-space:pre-wrap;word-break:break-word;line-height:1.9;font-size:1rem}.note-empty{padding:2rem 1rem;text-align:center;color:var(--text-color-3,#8a8a8a)}@media (max-width: 640px){.thoughts-page{padding:1rem .8rem 2rem}.thoughts-header{align-items:flex-start;flex-direction:column}.composer-card,.note-card{border-radius:16px}.upload-row,.composer-footer{flex-direction:column;align-items:stretch}.upload-hint{width:100%}#publishBtn,.manage-link,.upload-btn{width:100%}.timeline{padding-left:1.35rem}}
-</style>
-<script type="module">
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-const SUPABASE_URL = 'https://eqkcyfkhnihdchmcfdcw.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_4Y_S9gtbbOoa99cPZsKEbg_gaIw1GPW';
-const COMMENTS_TABLE = 'comments';
-const THREAD_KEY = 'notes';
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
-const noteInput = document.getElementById('noteInput');
-const publishBtn = document.getElementById('publishBtn');
-const notesList = document.getElementById('notesList');
-const countHint = document.getElementById('countHint');
-const statusText = document.getElementById('statusText');
-const imageInput = document.getElementById('imageInput');
-const imagePreviewWrap = document.getElementById('imagePreviewWrap');
-const imagePreview = document.getElementById('imagePreview');
-const removeImageBtn = document.getElementById('removeImageBtn');
-const uploadHint = document.getElementById('uploadHint');
-let selectedFile = null;
-let selectedBlobUrl = '';
-const setStatus = (text) => { statusText.textContent = text; };
-const updateCount = () => { countHint.textContent = `${noteInput.value.length} / 300`; };
-const clearImageSelection = () => {
-  selectedFile = null;
-  imageInput.value = '';
-  if (selectedBlobUrl) URL.revokeObjectURL(selectedBlobUrl);
-  selectedBlobUrl = '';
-  imagePreviewWrap.hidden = true;
-  imagePreview.removeAttribute('src');
-  uploadHint.textContent = '未选择图片';
-};
-imageInput.addEventListener('change', () => {
-  const file = imageInput.files?.[0];
-  if (!file) {
-    clearImageSelection();
-    return;
-  }
-  if (!file.type.startsWith('image/')) {
-    setStatus('请选择图片文件。');
-    clearImageSelection();
-    return;
-  }
-  selectedFile = file;
-  if (selectedBlobUrl) URL.revokeObjectURL(selectedBlobUrl);
-  selectedBlobUrl = URL.createObjectURL(file);
-  imagePreview.src = selectedBlobUrl;
-  imagePreviewWrap.hidden = false;
-  uploadHint.textContent = file.name;
-  setStatus('图片已选择');
-});
-removeImageBtn.addEventListener('click', clearImageSelection);
-const uploadImage = async (file) => {
-  const extension = (file.name.split('.').pop() || 'jpg').toLowerCase();
-  const safeName = `${Date.now()}-${Math.random().toString(16).slice(2)}.${extension}`;
-  const { error } = await supabase.storage.from('thoughts-images').upload(safeName, file, { contentType: file.type, upsert: false });
-  if (error) throw error;
-  return `storage:${safeName}`;
-};
-const resolveImageUrl = async (value) => {
-  if (!value) return '';
-  if (/^(https?:|data:)/i.test(value)) return value;
-  if (value.startsWith('storage:')) {
-    const storagePath = value.slice('storage:'.length);
-    const { data, error } = await supabase.storage.from('thoughts-images').createSignedUrl(storagePath, 60 * 60 * 24 * 7);
-    if (!error && data?.signedUrl) return data.signedUrl;
-  }
-  return value;
-};
-const formatTime = (value) => new Date(value).toLocaleString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
-const render = async () => {
-  const { data, error } = await supabase.from(COMMENTS_TABLE).select('id, content, website, created_at').eq('scope', 'notes').in('thread_key', ['notes', '/notes']).is('parent_id', null).order('created_at', { ascending: false });
-  if (error) {
-    notesList.innerHTML = `<div class="note-empty">加载失败：${error.message}</div>`;
-    return;
-  }
-  if (!data.length) {
-    notesList.innerHTML = '<div class="note-empty">还没有内容，先留下第一条吧。</div>';
-    return;
-  }
-  const resolved = await Promise.all(data.map(async (item) => ({ ...item, imageSrc: await resolveImageUrl(item.website) })));
-  notesList.innerHTML = resolved.map((item) => `<article class="note-item" data-id="${item.id}"><div class="note-card"><div class="note-head"><time>${formatTime(item.created_at)}</time></div><div class="note-body">${item.imageSrc ? `<img class="note-image" src="${item.imageSrc}" srcset="/img/loading.gif" lazyload alt="碎碎念图片">` : ''}<div class="note-text"></div></div></div></article>`).join('');
-  notesList.querySelectorAll('.note-item').forEach((card) => {
-    const item = resolved.find((entry) => entry.id === card.dataset.id);
-    card.querySelector('.note-text').textContent = item.content;
-  });
-};
-const publish = async () => {
-  const content = noteInput.value.trim();
-  if (!content && !selectedFile) {
-    setStatus('至少写点文字或者上传一张图片。');
-    return;
-  }
-  publishBtn.disabled = true;
-  setStatus('正在发布…');
-  try {
-    let imageUrl = null;
-    if (selectedFile) {
-      setStatus('正在上传图片…');
-      imageUrl = await uploadImage(selectedFile);
-    }
-    const { error } = await supabase.from(COMMENTS_TABLE).insert({ scope: 'notes', thread_key: THREAD_KEY, parent_id: null, content, website: imageUrl, name: 'anonymous' });
-    if (error) throw error;
-    noteInput.value = '';
-    updateCount();
-    clearImageSelection();
-    await render();
-    setStatus('发布成功');
-  } catch (error) {
-    setStatus(`发布失败：${error.message}`);
-  } finally {
-    publishBtn.disabled = false;
-  }
-};
-publishBtn.addEventListener('click', publish);
-noteInput.addEventListener('input', updateCount);
-noteInput.addEventListener('keydown', (event) => { if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') publish(); });
-updateCount();
-setStatus('准备发布');
-render();
-</script>
-
-
-
-
-
-
-
-
-  ﻿
-
+<div class="thoughts-timeline">
+  <ol class="thought-list list-unstyled" data-thought-list
+      data-base-url="/notes/"
+      data-batch-size="20"
+      data-next-page="2"
+      data-total-pages="1">
+    
+    
+      
+      <li class="thought-item" id="20" data-thought-item data-thought-id="cmt76kz1w000kwxyy7rdh901r">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#20" title="复制链接">#20</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1787473697000">08-23 16:28</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-08-23T08:28:17.000Z">08-23 16:28</time>
+          <span class="thought-weekday">周日</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1w000kwxyy7rdh901r"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>更新了</p>
 </article>
+      </li>
+    
+      
+      <li class="thought-item" id="19" data-thought-item data-thought-id="cmt76kz1s000awxyycysr8h3z">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#19" title="复制链接">#19</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1785803307000">08-04 08:28</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-08-04T00:28:27.000Z">08-04 08:28</time>
+          <span class="thought-weekday">周二</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1s000awxyycysr8h3z"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>今天给别人车刮了，两天白干 下次一定要注意不要自以为是，嗓子好痛</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="18" data-thought-item data-thought-id="cmt76kz1v000gwxyyewetdu85">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#18" title="复制链接">#18</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1785653577000">08-02 14:52</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-08-02T06:52:57.000Z">08-02 14:52</time>
+          <span class="thought-weekday">周日</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1v000gwxyyewetdu85"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>明天就得去上课了</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="17" data-thought-item data-thought-id="cmt76kz1x000owxyy7s9s80od">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#17" title="复制链接">#17</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1785301553000">07-29 13:05</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-29T05:05:53.000Z">07-29 13:05</time>
+          <span class="thought-weekday">周三</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1x000owxyy7s9s80od"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>钱难挣，屎难吃</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="16" data-thought-item data-thought-id="cmt76kz1x000mwxyy7o41alo3">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#16" title="复制链接">#16</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1785052079000">07-26 15:47</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-26T07:47:59.000Z">07-26 15:47</time>
+          <span class="thought-weekday">周日</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1x000mwxyy7o41alo3"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>我能做到问心无愧就行 不是我的问题 要远离一切让我内耗的东西</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="15" data-thought-item data-thought-id="cmt76kz1x000nwxyy153180cv">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#15" title="复制链接">#15</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1784388220000">07-18 23:23</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-18T15:23:40.000Z">07-18 23:23</time>
+          <span class="thought-weekday">周六</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1x000nwxyy153180cv"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>追踪数据来源</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="14" data-thought-item data-thought-id="cmt76kz1n0003wxyyaekuahe3">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#14" title="复制链接">#14</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1784387746000">07-18 23:15</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-18T15:15:46.000Z">07-18 23:15</time>
+          <span class="thought-weekday">周六</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1n0003wxyyaekuahe3"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>beef-x s s</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="13" data-thought-item data-thought-id="cmt76kz1u000ewxyyaqw701ix">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#13" title="复制链接">#13</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1784339592000">07-18 09:53</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-18T01:53:12.000Z">07-18 09:53</time>
+          <span class="thought-weekday">周六</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1u000ewxyyaqw701ix"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>烂人都滚出我的生活好吗</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="12" data-thought-item data-thought-id="cmt76kz1v000iwxyy5gqh0a8m">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#12" title="复制链接">#12</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1784276914000">07-17 16:28</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-17T08:28:34.000Z">07-17 16:28</time>
+          <span class="thought-weekday">周五</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1v000iwxyy5gqh0a8m"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>我会认真对待你，是因为我想这么做，如果能换回同等的真心，我很高兴，如果不能，也没什么好后悔的</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="11" data-thought-item data-thought-id="cmt76kz1w000lwxyy3ngb37bq">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#11" title="复制链接">#11</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1784004763000">07-14 12:52</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-14T04:52:43.000Z">07-14 12:52</time>
+          <span class="thought-weekday">周二</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1w000lwxyy3ngb37bq"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>今天很开心很开心很开心😃</p>
+<p><img src="/img/1784033557146-116fd61cfd4af.jpeg" srcset="/img/loading.gif" lazyload></p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="10" data-thought-item data-thought-id="cmt76kz1k0001wxyy19t75zol">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#10" title="复制链接">#10</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1783900110000">07-13 07:48</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-12T23:48:30.000Z">07-13 07:48</time>
+          <span class="thought-weekday">周一</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1k0001wxyy19t75zol"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>测试</p>
+<p><img src="/img/1783928905068-3a23e5c7485f68.jpeg" srcset="/img/loading.gif" lazyload></p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="9" data-thought-item data-thought-id="cmt76kz1p0006wxyybjdbdm9m">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#9" title="复制链接">#9</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1783898646000">07-13 07:24</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-12T23:24:06.000Z">07-13 07:24</time>
+          <span class="thought-weekday">周一</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1p0006wxyybjdbdm9m"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>唐图测试</p>
+<p><img src="/img/1783927442927-c85c9d215c24f.jpeg" srcset="/img/loading.gif" lazyload></p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="8" data-thought-item data-thought-id="cmt76kz1r0009wxyyc6x2c4s8">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#8" title="复制链接">#8</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1783849020000">07-12 17:37</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-12T09:37:00.000Z">07-12 17:37</time>
+          <span class="thought-weekday">周日</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1r0009wxyyc6x2c4s8"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>还没有跑通。</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="7" data-thought-item data-thought-id="cmt76kz1v000hwxyy7ftz3ddu">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#7" title="复制链接">#7</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1783787160000">07-12 00:26</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-11T16:26:00.000Z">07-12 00:26</time>
+          <span class="thought-weekday">周日</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1v000hwxyy7ftz3ddu"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>回家啦。</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="6" data-thought-item data-thought-id="cmt76kz1w000jwxyy0d2b3uep">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#6" title="复制链接">#6</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1783722000000">07-11 06:20</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-10T22:20:00.000Z">07-11 06:20</time>
+          <span class="thought-weekday">周六</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1w000jwxyy0d2b3uep"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>人生有太多的后知后觉。</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="5" data-thought-item data-thought-id="cmt76kz1t000dwxyyfpu9eset">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#5" title="复制链接">#5</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1783461600000">07-08 06:00</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-07T22:00:00.000Z">07-08 06:00</time>
+          <span class="thought-weekday">周三</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1t000dwxyyfpu9eset"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>我预习过胜利，也预习过死亡，唯独没预习过平淡的人生。</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="4" data-thought-item data-thought-id="cmt76kz1u000fwxyy5m4540z9">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#4" title="复制链接">#4</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1783359360000">07-07 01:36</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-06T17:36:00.000Z">07-07 01:36</time>
+          <span class="thought-weekday">周二</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1u000fwxyy5m4540z9"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>希望不要迟到。</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="3" data-thought-item data-thought-id="cmt76kz1r0008wxyyd9khhg9d">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#3" title="复制链接">#3</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1783311960000">07-06 12:26</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-06T04:26:00.000Z">07-06 12:26</time>
+          <span class="thought-weekday">周一</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1r0008wxyyd9khhg9d"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>出去买水果，下雨了。</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="2" data-thought-item data-thought-id="cmt76kz1t000cwxyydcx2horq">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#2" title="复制链接">#2</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1783297560000">07-06 08:26</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-06T00:26:00.000Z">07-06 08:26</time>
+          <span class="thought-weekday">周一</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1t000cwxyydcx2horq"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>人和人之间有过一个瞬间就够了，没有必要事事都弄清楚。</p>
+</article>
+      </li>
+    
+      
+      <li class="thought-item" id="1" data-thought-item data-thought-id="cmt76kz1y000pwxyydfjbenaa">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#1" title="复制链接">#1</a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="1783274400000">07-06 02:00</span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="2026-07-05T18:00:00.000Z">07-06 02:00</time>
+          <span class="thought-weekday">周一</span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="cmt76kz1y000pwxyydfjbenaa"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><p>go go go 出发喽</p>
+</article>
+      </li>
+    
+  </ol>
+
+  <div class="thoughts-sentinel" data-thoughts-sentinel aria-hidden="true"></div>
+  <div class="thoughts-loading" data-thoughts-loading hidden>加载中…</div>
+</div>
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
 
 
 
@@ -622,9 +1052,66 @@ render();
 
 
 
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
   <script  src="/js/local-search.js" ></script>
 
 
+
+
+  
+<script src="/js/thoughts.js"></script>
 
 
 

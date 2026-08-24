@@ -2,45 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://sojay0205.github.io/messages/index.html</loc>
-    
-    <lastmod>2026-08-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://sojay0205.github.io/notes/index.html</loc>
-    
-    <lastmod>2026-08-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://sojay0205.github.io/notes/manage/index.html</loc>
     
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://sojay0205.github.io/2026/06/11/share/</loc>
+    <loc>https://sojay0205.github.io/messages/index.html</loc>
     
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://sojay0205.github.io/2026/05/30/%E4%BA%94%E6%9C%88%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://sojay0205.github.io/2026/07/14/thought-e35d3dde/</loc>
     
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/26/thought-b94f8b9e/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/18/thought-e831f142/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/29/thought-f1aad147/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/05/thought-f1d156b4/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +67,16 @@
   <url>
     <loc>https://sojay0205.github.io/2026/07/30/%E4%B8%83%E6%9C%88/</loc>
     
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/05/30/%E4%BA%94%E6%9C%88%E6%80%BB%E7%BB%93/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +85,7 @@
   <url>
     <loc>https://sojay0205.github.io/2026/07/05/%E5%85%AD%E6%9C%88/</loc>
     
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +94,7 @@
   <url>
     <loc>https://sojay0205.github.io/2026/07/18/%E6%A0%87%E6%9C%AC/</loc>
     
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,7 +103,151 @@
   <url>
     <loc>https://sojay0205.github.io/about/index.html</loc>
     
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/12/thought-09577003/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/18/thought-17fedc2f/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/06/11/share/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/12/thought-18f7cbd3/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/06/thought-1b3e43d9/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/12/thought-31ed07be/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/08/04/thought-2ae9a718/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/06/thought-3a665f6f/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/07/thought-5c1a9a1c/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/18/thought-5e7d36ac/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/06/thought-3e8b2f27/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/08/02/thought-79e1e41c/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/11/thought-822cbd2f/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/17/thought-8459503b/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/07/10/thought-9d0f49dd/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sojay0205.github.io/2026/08/23/thought-a0d94db0/</loc>
+    
+    <lastmod>2026-08-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,7 +256,7 @@
 
   <url>
     <loc>https://sojay0205.github.io/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -93,21 +264,21 @@
   
   <url>
     <loc>https://sojay0205.github.io/tags/share/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://sojay0205.github.io/tags/%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://sojay0205.github.io/tags/emotion/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -116,7 +287,7 @@
   
   <url>
     <loc>https://sojay0205.github.io/categories/%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

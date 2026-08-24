@@ -1,0 +1,166 @@
+/* 碎碎念时间线样式（通过 Fluid custom_css 注入） */
+
+.thoughts-header {
+  max-width: 720px;
+  margin: 0 auto 1.4rem;
+}
+.thoughts-title {
+  font-size: 2.1rem;
+  line-height: 1.1;
+  margin: 0 0 .5rem;
+}
+.thoughts-subtitle {
+  margin: 0;
+  font-size: 1rem;
+}
+.thoughts-write-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .9rem;
+  padding: .5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--button-bg-color, #1e80ff);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color .2s ease;
+}
+.thoughts-write-btn:hover {
+  background: var(--button-hover-bg-color, #0d6efd);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 时间线容器 */
+.thoughts-timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 720px;
+  padding-left: 1.75rem;
+}
+.thoughts-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .4rem;
+  bottom: 0;
+  width: 1px;
+  background: var(--line-color, rgba(0, 0, 0, .12));
+}
+
+/* 条目 */
+.thought-item {
+  position: relative;
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--line-color, rgba(0, 0, 0, .06));
+}
+.thought-item:last-child {
+  border-bottom: 0;
+}
+
+/* 时间线圆点 */
+.thought-dot {
+  position: absolute;
+  left: -1.75rem;
+  top: .45rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fda4af;
+  box-shadow: 0 0 0 4px var(--board-bg-color, #fff);
+}
+
+/* 元信息 */
+.thought-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem .6rem;
+  font-size: .8rem;
+  color: var(--sec-text-color, #888);
+  margin-bottom: .75rem;
+}
+.thought-anchor {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 600;
+  color: #e11d48;
+}
+.thought-anchor:hover {
+  color: #e11d48;
+  text-decoration: none;
+}
+.thought-weekday {
+  white-space: nowrap;
+}
+
+/* 点赞按钮 */
+.thought-heart { color: currentColor; }
+.thought-like-btn {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--sec-text-color, #888);
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  padding: 0;
+}
+.thought-like-btn:hover { color: #e11d48; }
+.thought-like-btn[data-liked="true"] { color: #e11d48; }
+
+/* 动效 */
+@keyframes thought-heart-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+.thought-heart-pop {
+  animation: thought-heart-pop .45s cubic-bezier(.17, .89, .32, 1.49);
+}
+
+@keyframes highlight-thought {
+  0% { background: rgba(251, 191, 36, .18); }
+  100% { background: transparent; }
+}
+.thought-item.highlight-thought {
+  animation: highlight-thought 2s ease-out;
+  border-radius: 8px;
+}
+
+/* 点赞反馈气泡 */
+.thought-like-wrap { position: relative; }
+.thought-bubble {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: .15rem .5rem;
+  font-size: .72rem;
+  border-radius: .3rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .2s;
+  pointer-events: none;
+}
+.thought-bubble.bubble-visible { opacity: 1; }
+.thought-bubble.thanks { background: #fff1f2; color: #e11d48; }
+.thought-bubble.liked  { background: #f5f5f4; color: #78716c; }
+.thought-bubble.error  { background: #f5f5f5; color: #a8a29e; }
+
+/* 加载提示 */
+.thoughts-loading {
+  text-align: center;
+  color: var(--sec-text-color, #888);
+  font-size: .85rem;
+  padding: .5rem 0 1rem;
+}
+
+/* 响应式：移动端隐藏竖线与圆点 */
+@media (max-width: 576px) {
+  .thoughts-timeline { padding-left: 0; }
+  .thoughts-timeline::before,
+  .thought-dot { display: none; }
+}

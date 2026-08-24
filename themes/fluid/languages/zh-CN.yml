@@ -28,6 +28,16 @@ about:
   title: '关于'
   subtitle: '关于'
 
+notes:
+  menu: '碎碎念'
+  title: '碎碎念'
+  subtitle: '一些不成文的瞬间，记录生活、心情与灵感'
+
+messages:
+  menu: '留言板'
+  title: '留言板'
+  subtitle: '留下一点足迹、想法或问候'
+
 links:
   menu: '友链'
   title: '友链'

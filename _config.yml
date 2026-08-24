@@ -80,6 +80,12 @@ updated_option: 'mtime'
 per_page: 10
 pagination_dir: page
 
+# ----- 碎碎念（Thoughts）模块 -----
+thoughts:
+  per_page: 20   # 每页条数（无限滚动每批加载量）
+  order: -1      # -1 倒序
+  publish_url: "https://github.com/Sojay0205/Sojay0205.github.io/issues/new?labels=thought&title=%E7%A2%8E%E7%A2%8E%E5%BF%B5&body=%3C!--%20%E5%9C%A8%E8%BF%99%E9%87%8C%E5%86%99%E7%A2%8E%E7%A2%8E%E5%BF%B5%E5%86%85%E5%AE%B9%EF%BC%8C%E6%94%AF%E6%8C%81%20Markdown%E3%80%81%E6%8D%A2%E8%A1%8C%E3%80%81%E9%93%BE%E6%8E%A5%EF%BC%9B%E5%9B%BE%E7%89%87%E7%9B%B4%E6%8E%A5%E7%B2%98%E8%B4%B4%E6%88%96%E6%8B%96%E5%85%A5%E5%8D%B3%E5%8F%AF%20--%3E"
+
 # ----- 包含 / 排除文件 -----
 include:
 exclude:

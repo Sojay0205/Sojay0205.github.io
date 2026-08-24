@@ -1,4 +1,4 @@
-﻿# Fluid theme config
+# Fluid theme config
 color_scheme: auto
 
 navbar:
@@ -88,6 +88,11 @@ about:
   name: "Sojay"
   intro: "记录生活，分享学习，搭建技术栈"
 
+thoughts:
+  banner_img: ""
+  banner_img_height: 30
+  banner_mask_alpha: 0.3
+
 page404:
   enable: true
   banner_img: ""
@@ -111,6 +116,12 @@ highlight:
 lazyload:
   enable: true
   onlypost: false
+
+# 碎碎念模块自定义资源注入
+custom_css:
+  - /css/thoughts.css
+custom_js:
+  - /js/thoughts.js
 
 # 图标字体（添加 https 前缀避免协议问题）
 iconfont: https://at.alicdn.com/t/c/font_1736178_k526ubmyhba.css

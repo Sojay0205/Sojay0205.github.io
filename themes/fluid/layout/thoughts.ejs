@@ -1,0 +1,60 @@
+<%
+page.layout = "thoughts"
+page.title = page.title || "碎碎念"
+page.subtitle = page.subtitle || "一些不成文的瞬间，记录生活、心情与灵感"
+page.banner_img = theme.thoughts.banner_img
+page.banner_img_height = theme.thoughts.banner_img_height
+page.banner_mask_alpha = theme.thoughts.banner_mask_alpha
+%>
+
+<% var publishUrl = config.thoughts && config.thoughts.publish_url; %>
+<section class="thoughts-header text-center mb-4">
+  <h1 class="thoughts-title"><%= page.title %></h1>
+  <p class="thoughts-subtitle text-muted"><%= page.subtitle %>，共 <%= page.count %> 条。</p>
+  <% if (publishUrl) { %>
+    <a class="thoughts-write-btn" href="<%= publishUrl %>" target="_blank" rel="noopener">写一条</a>
+  <% } %>
+</section>
+
+<div class="thoughts-timeline">
+  <ol class="thought-list list-unstyled" data-thought-list
+      data-base-url="<%= url_for(page.base) %>"
+      data-batch-size="<%= config.thoughts && config.thoughts.per_page || 20 %>"
+      data-next-page="<%= page.current + 1 %>"
+      data-total-pages="<%= page.total %>">
+    <% var weekdays = ['日', '一', '二', '三', '四', '五', '六']; %>
+    <% page.posts.each(function (thought, i) { %>
+      <% var n = page.seq[thought._id] || (i + 1); %>
+      <li class="thought-item" id="<%= n %>" data-thought-item data-thought-id="<%= thought._id %>">
+        <span class="thought-dot" aria-hidden="true"></span>
+        <div class="thought-meta">
+          <a class="thought-anchor" href="#<%= n %>" title="复制链接">#<%= n %></a>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-time-meta">发布于
+            <span class="thought-time-ago" data-timestamp="<%= thought.date.valueOf() %>"><%= date(thought.date, 'MM-DD HH:mm') %></span>
+          </span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <time datetime="<%= date_xml(thought.date) %>"><%= date(thought.date, 'MM-DD HH:mm') %></time>
+          <span class="thought-weekday">周<%= weekdays[thought.date.day()] %></span>
+          <span class="thought-sep" aria-hidden="true">·</span>
+          <span class="thought-like-wrap">
+            <button type="button" class="thought-like-btn"
+                    data-thought-id="<%= thought._id %>"
+                    data-liked="false" data-total="0"
+                    aria-label="点赞">
+              <span class="thought-heart" aria-hidden="true">♥</span>
+              <span class="thought-like-count"></span>
+            </button>
+          </span>
+        </div>
+        <article class="thought-entry markdown-body"><%- thought.content %></article>
+      </li>
+    <% }) %>
+  </ol>
+
+  <div class="thoughts-sentinel" data-thoughts-sentinel aria-hidden="true"></div>
+  <div class="thoughts-loading" data-thoughts-loading hidden>加载中…</div>
+</div>
+
+<%- partial('_partials/paginator.ejs') %>
+<%- partial('_partials/markdown-plugins') %>

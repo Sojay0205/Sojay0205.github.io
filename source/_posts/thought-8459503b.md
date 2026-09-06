@@ -2,6 +2,7 @@
 title: "我会认真对待你，是因为我想这么做，如果能…"
 date: "2026-07-17T16:28:34Z"
 thought: true
+archive: true
 comments: false
 ---
 

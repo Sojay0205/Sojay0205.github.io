@@ -2,6 +2,7 @@
 title: "唐图测试"
 date: "2026-07-13T07:24:06Z"
 thought: true
+archive: true
 comments: false
 ---
 

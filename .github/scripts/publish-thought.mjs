@@ -89,6 +89,7 @@ const frontMatter = [
   'title: ' + JSON.stringify(title),
   'date: ' + JSON.stringify(createdAt),
   'thought: true',
+  'archive: true',
   'comments: false',
   '---'
 ].join('\n');

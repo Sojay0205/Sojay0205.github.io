@@ -1,4 +1,4 @@
-﻿<div class="post-message-board">
+<div class="post-message-board">
   <div class="message-board-title">
     <h2>留言板</h2>
     <p>写下想说的话，评论会实时显示。</p>
@@ -24,7 +24,7 @@ const SUPABASE_URL = 'https://eqkcyfkhnihdchmcfdcw.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_4Y_S9gtbbOoa99cPZsKEbg_gaIw1GPW';
 const ADMIN_EMAIL = '1557754391@qq.com';
 const COMMENTS_TABLE = 'comments';
-const THREAD_KEY = location.pathname.replace(/\/+$/,'') || '/';
+const THREAD_KEY = '<%= page.path %>';
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
 const nameInput = document.getElementById('nameInput');
 const messageInput = document.getElementById('messageInput');
